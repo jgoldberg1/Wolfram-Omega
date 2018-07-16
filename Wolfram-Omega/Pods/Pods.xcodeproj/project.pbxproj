@@ -1,0 +1,722 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		468303BD457B21AABEAECEA1102B4C3F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE2E9972E4EADE8079124B2892701799 /* UIKit.framework */; };
+		4713BFD71652BB3B763E26CED43134ED /* Pods-Wolfram-Omega-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C371185BFD0204F6E3390414CF6D7F /* Pods-Wolfram-Omega-dummy.m */; };
+		5BD3E1EBBBB821A29EC63E98B8510AE1 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5CE975DFECEB106EEEC1859EF076D2A5 /* Montserrat-Bold.ttf */; };
+		5DC743674188B37BBE1812DDBFBFB1EF /* Montserrat-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 061D42175295AD04F7905BAD7701183E /* Montserrat-dummy.m */; };
+		65A958D6948CCF2E98D55D3439BE5219 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EFE6F1FF612CA1D7BDA23A60B0250E2E /* Montserrat-Regular.ttf */; };
+		6C5661E21075A3AC3F05B09910A2B91D /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B33AB8367156D9CECB163A282B22FA8 /* CoreText.framework */; };
+		76AA84C504CC35F66ADF52A21452A77A /* UIFont+Montserrat.m in Sources */ = {isa = PBXBuildFile; fileRef = 39323F55A4299FAC1EF7D0A4B78EC0DE /* UIFont+Montserrat.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		83A1891381916C95C1BDE2368FE78D06 /* Montserrat-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7032887C57D4871BB81899AB071B07B3 /* Montserrat-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AD8DF375E40F4A9FC3CAD5D6F4B05FEF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E12950B9CE60F60E04016668A8A8842 /* Foundation.framework */; };
+		AE0F799835C4F3F99843970C9AC6B714 /* Pods-Wolfram-Omega-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 160F354C239B340AC90747185FFB00E3 /* Pods-Wolfram-Omega-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BBAF70584377E5C30B5E08AF81BC4196 /* UIFont+Montserrat.h in Headers */ = {isa = PBXBuildFile; fileRef = 57D52131E1E5F3830EF484BFDA8EC7A2 /* UIFont+Montserrat.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BBC23A3F9E857C69D69633C071513999 /* Montserrat.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C994190B9C0D10EA3D036A367F78CD94 /* Montserrat.bundle */; };
+		E6C68A19CCD72AA9DA042BFAE347E06D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E12950B9CE60F60E04016668A8A8842 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9E858073C82A2A5066F414824D4871CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 48BAB297E6C22C73C43076FDC026AC31;
+			remoteInfo = Montserrat;
+		};
+		ACE6E82692EBA46D57E41D39BA627BC9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DC158FB249781CC1E362BFB3DC5BF6AE;
+			remoteInfo = "Montserrat-Montserrat";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		061D42175295AD04F7905BAD7701183E /* Montserrat-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Montserrat-dummy.m"; sourceTree = "<group>"; };
+		160F354C239B340AC90747185FFB00E3 /* Pods-Wolfram-Omega-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Wolfram-Omega-umbrella.h"; sourceTree = "<group>"; };
+		39323F55A4299FAC1EF7D0A4B78EC0DE /* UIFont+Montserrat.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Montserrat.m"; sourceTree = "<group>"; };
+		41EF830ABA8D41615C358E03E07FD058 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57D52131E1E5F3830EF484BFDA8EC7A2 /* UIFont+Montserrat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIFont+Montserrat.h"; sourceTree = "<group>"; };
+		5B33AB8367156D9CECB163A282B22FA8 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/CoreText.framework; sourceTree = DEVELOPER_DIR; };
+		5CE975DFECEB106EEEC1859EF076D2A5 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; includeInIndex = 1; name = "Montserrat-Bold.ttf"; path = "Fonts/Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		69C76F6CCD1A4DC4F16BB72B571BB9F7 /* Pods-Wolfram-Omega-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Wolfram-Omega-acknowledgements.plist"; sourceTree = "<group>"; };
+		6E1BCD5C24D7B1B4060A3100D55F6727 /* Pods_Wolfram_Omega.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Wolfram_Omega.framework; path = "Pods-Wolfram-Omega.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7032887C57D4871BB81899AB071B07B3 /* Montserrat-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Montserrat-umbrella.h"; sourceTree = "<group>"; };
+		861B7F871BB0CAA4261199A2D65C63B1 /* Montserrat-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Montserrat-prefix.pch"; sourceTree = "<group>"; };
+		8CC2AC028035507949D88359B597416C /* Montserrat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Montserrat.framework; path = Montserrat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CC3E606C67CE9F47B45E0D816756738 /* ResourceBundle-Montserrat-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-Montserrat-Info.plist"; sourceTree = "<group>"; };
+		8F873486EECFA2C4F29F8D84661676A6 /* Pods-Wolfram-Omega-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Wolfram-Omega-resources.sh"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9E12950B9CE60F60E04016668A8A8842 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		A055064828E495C54FF64A12EF052C77 /* Montserrat.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Montserrat.xcconfig; sourceTree = "<group>"; };
+		BB096FA92004CF9DA708A52ECCA020AE /* Pods-Wolfram-Omega-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Wolfram-Omega-acknowledgements.markdown"; sourceTree = "<group>"; };
+		BF804FC9280216D41A1F642CA0C76F91 /* Pods-Wolfram-Omega.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Wolfram-Omega.modulemap"; sourceTree = "<group>"; };
+		C994190B9C0D10EA3D036A367F78CD94 /* Montserrat.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = Montserrat.bundle; path = "Montserrat-Montserrat.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE90A7B75D14BCCA20228088124D2A18 /* Pods-Wolfram-Omega-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Wolfram-Omega-frameworks.sh"; sourceTree = "<group>"; };
+		D013F7CD11DFA1B9503141ABD531323B /* Pods-Wolfram-Omega.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Wolfram-Omega.release.xcconfig"; sourceTree = "<group>"; };
+		D7C371185BFD0204F6E3390414CF6D7F /* Pods-Wolfram-Omega-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Wolfram-Omega-dummy.m"; sourceTree = "<group>"; };
+		DE2E9972E4EADE8079124B2892701799 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		DFADC2E1FE3E450E803C292E84D800EC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EADCA6B4A399493D24B17C6D603344F4 /* Pods-Wolfram-Omega.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Wolfram-Omega.debug.xcconfig"; sourceTree = "<group>"; };
+		EFE6F1FF612CA1D7BDA23A60B0250E2E /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; includeInIndex = 1; name = "Montserrat-Regular.ttf"; path = "Fonts/Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		F4FBD69D0D7CDB6FA05D574921F4ED48 /* Montserrat.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Montserrat.modulemap; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		89383438530846EC0C013AB9AE2168F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C5661E21075A3AC3F05B09910A2B91D /* CoreText.framework in Frameworks */,
+				AD8DF375E40F4A9FC3CAD5D6F4B05FEF /* Foundation.framework in Frameworks */,
+				468303BD457B21AABEAECEA1102B4C3F /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C95DC4058BBF332CF3C941394A58F8E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6C68A19CCD72AA9DA042BFAE347E06D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F37565899C7614F17C13AB3CADCB1281 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		122DA2E5084A4393C29BE363C764795C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A6E8F77E6A3B76377DD6425D7F87AFA3 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		296A19CD7D48801EC5663846384205FF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C994190B9C0D10EA3D036A367F78CD94 /* Montserrat.bundle */,
+				8CC2AC028035507949D88359B597416C /* Montserrat.framework */,
+				6E1BCD5C24D7B1B4060A3100D55F6727 /* Pods_Wolfram_Omega.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2C258D8C9A89377AF0EDE07984BB38A7 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				DFADC2E1FE3E450E803C292E84D800EC /* Info.plist */,
+				F4FBD69D0D7CDB6FA05D574921F4ED48 /* Montserrat.modulemap */,
+				A055064828E495C54FF64A12EF052C77 /* Montserrat.xcconfig */,
+				061D42175295AD04F7905BAD7701183E /* Montserrat-dummy.m */,
+				861B7F871BB0CAA4261199A2D65C63B1 /* Montserrat-prefix.pch */,
+				7032887C57D4871BB81899AB071B07B3 /* Montserrat-umbrella.h */,
+				8CC3E606C67CE9F47B45E0D816756738 /* ResourceBundle-Montserrat-Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Montserrat";
+			sourceTree = "<group>";
+		};
+		2F493763C3220BC4F8F7649809FE5209 /* Montserrat */ = {
+			isa = PBXGroup;
+			children = (
+				57D52131E1E5F3830EF484BFDA8EC7A2 /* UIFont+Montserrat.h */,
+				39323F55A4299FAC1EF7D0A4B78EC0DE /* UIFont+Montserrat.m */,
+				D09E07F1CEED1C9C9789E4CD2CE95A25 /* Resources */,
+				2C258D8C9A89377AF0EDE07984BB38A7 /* Support Files */,
+			);
+			name = Montserrat;
+			path = Montserrat;
+			sourceTree = "<group>";
+		};
+		71F2BE7E85E7B8678D66940D92D442AC /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F9B9C98AC3E1CC0BFDC7108608D81885 /* Pods-Wolfram-Omega */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				122DA2E5084A4393C29BE363C764795C /* Frameworks */,
+				B9C663647F55AFE090627938AF5ACB2D /* Pods */,
+				296A19CD7D48801EC5663846384205FF /* Products */,
+				71F2BE7E85E7B8678D66940D92D442AC /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		A6E8F77E6A3B76377DD6425D7F87AFA3 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				5B33AB8367156D9CECB163A282B22FA8 /* CoreText.framework */,
+				9E12950B9CE60F60E04016668A8A8842 /* Foundation.framework */,
+				DE2E9972E4EADE8079124B2892701799 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		B9C663647F55AFE090627938AF5ACB2D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2F493763C3220BC4F8F7649809FE5209 /* Montserrat */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D09E07F1CEED1C9C9789E4CD2CE95A25 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5CE975DFECEB106EEEC1859EF076D2A5 /* Montserrat-Bold.ttf */,
+				EFE6F1FF612CA1D7BDA23A60B0250E2E /* Montserrat-Regular.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		F9B9C98AC3E1CC0BFDC7108608D81885 /* Pods-Wolfram-Omega */ = {
+			isa = PBXGroup;
+			children = (
+				41EF830ABA8D41615C358E03E07FD058 /* Info.plist */,
+				BF804FC9280216D41A1F642CA0C76F91 /* Pods-Wolfram-Omega.modulemap */,
+				BB096FA92004CF9DA708A52ECCA020AE /* Pods-Wolfram-Omega-acknowledgements.markdown */,
+				69C76F6CCD1A4DC4F16BB72B571BB9F7 /* Pods-Wolfram-Omega-acknowledgements.plist */,
+				D7C371185BFD0204F6E3390414CF6D7F /* Pods-Wolfram-Omega-dummy.m */,
+				CE90A7B75D14BCCA20228088124D2A18 /* Pods-Wolfram-Omega-frameworks.sh */,
+				8F873486EECFA2C4F29F8D84661676A6 /* Pods-Wolfram-Omega-resources.sh */,
+				160F354C239B340AC90747185FFB00E3 /* Pods-Wolfram-Omega-umbrella.h */,
+				EADCA6B4A399493D24B17C6D603344F4 /* Pods-Wolfram-Omega.debug.xcconfig */,
+				D013F7CD11DFA1B9503141ABD531323B /* Pods-Wolfram-Omega.release.xcconfig */,
+			);
+			name = "Pods-Wolfram-Omega";
+			path = "Target Support Files/Pods-Wolfram-Omega";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		299962DC7612D5FA5028DCFE6D2649C9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83A1891381916C95C1BDE2368FE78D06 /* Montserrat-umbrella.h in Headers */,
+				BBAF70584377E5C30B5E08AF81BC4196 /* UIFont+Montserrat.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2384951ACD13E45D6865C201861DFE2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE0F799835C4F3F99843970C9AC6B714 /* Pods-Wolfram-Omega-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		48BAB297E6C22C73C43076FDC026AC31 /* Montserrat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8E18A6277D4270E013D49C14799568B9 /* Build configuration list for PBXNativeTarget "Montserrat" */;
+			buildPhases = (
+				F1C99F7C71A433A79B40DEA07DFA9EA7 /* Sources */,
+				89383438530846EC0C013AB9AE2168F4 /* Frameworks */,
+				FC97F6E323EB354CF4083CA823ECD974 /* Resources */,
+				299962DC7612D5FA5028DCFE6D2649C9 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CCCF835AD984474C811E25EF0B559E92 /* PBXTargetDependency */,
+			);
+			name = Montserrat;
+			productName = Montserrat;
+			productReference = 8CC2AC028035507949D88359B597416C /* Montserrat.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D2EF92C779F78597CB07832BF8FD1F31 /* Pods-Wolfram-Omega */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 32EF7A2A4D6B4CE01271488106330A80 /* Build configuration list for PBXNativeTarget "Pods-Wolfram-Omega" */;
+			buildPhases = (
+				F72DAB7D777C6DE9804917E83385DAFD /* Sources */,
+				C95DC4058BBF332CF3C941394A58F8E6 /* Frameworks */,
+				E2384951ACD13E45D6865C201861DFE2 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8F3FF182251EC4F62654DFB8459520DF /* PBXTargetDependency */,
+			);
+			name = "Pods-Wolfram-Omega";
+			productName = "Pods-Wolfram-Omega";
+			productReference = 6E1BCD5C24D7B1B4060A3100D55F6727 /* Pods_Wolfram_Omega.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DC158FB249781CC1E362BFB3DC5BF6AE /* Montserrat-Montserrat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D5C3AB7E1369F58D23DB46AC5155B0F2 /* Build configuration list for PBXNativeTarget "Montserrat-Montserrat" */;
+			buildPhases = (
+				D84A2A66F828A16F1EAE29C540741E2F /* Sources */,
+				F37565899C7614F17C13AB3CADCB1281 /* Frameworks */,
+				422616213902AD6D55283FE84AA6155A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Montserrat-Montserrat";
+			productName = "Montserrat-Montserrat";
+			productReference = C994190B9C0D10EA3D036A367F78CD94 /* Montserrat.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 296A19CD7D48801EC5663846384205FF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				48BAB297E6C22C73C43076FDC026AC31 /* Montserrat */,
+				DC158FB249781CC1E362BFB3DC5BF6AE /* Montserrat-Montserrat */,
+				D2EF92C779F78597CB07832BF8FD1F31 /* Pods-Wolfram-Omega */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		422616213902AD6D55283FE84AA6155A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BD3E1EBBBB821A29EC63E98B8510AE1 /* Montserrat-Bold.ttf in Resources */,
+				65A958D6948CCF2E98D55D3439BE5219 /* Montserrat-Regular.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC97F6E323EB354CF4083CA823ECD974 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBC23A3F9E857C69D69633C071513999 /* Montserrat.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D84A2A66F828A16F1EAE29C540741E2F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1C99F7C71A433A79B40DEA07DFA9EA7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DC743674188B37BBE1812DDBFBFB1EF /* Montserrat-dummy.m in Sources */,
+				76AA84C504CC35F66ADF52A21452A77A /* UIFont+Montserrat.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F72DAB7D777C6DE9804917E83385DAFD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4713BFD71652BB3B763E26CED43134ED /* Pods-Wolfram-Omega-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8F3FF182251EC4F62654DFB8459520DF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Montserrat;
+			target = 48BAB297E6C22C73C43076FDC026AC31 /* Montserrat */;
+			targetProxy = 9E858073C82A2A5066F414824D4871CF /* PBXContainerItemProxy */;
+		};
+		CCCF835AD984474C811E25EF0B559E92 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Montserrat-Montserrat";
+			target = DC158FB249781CC1E362BFB3DC5BF6AE /* Montserrat-Montserrat */;
+			targetProxy = ACE6E82692EBA46D57E41D39BA627BC9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1BC8A5DEAC3430E23DD1144579F02014 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A055064828E495C54FF64A12EF052C77 /* Montserrat.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Montserrat";
+				INFOPLIST_FILE = "Target Support Files/Montserrat/ResourceBundle-Montserrat-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = Montserrat;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		2085DA4228A2A7C9B20FC3B55E219F9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A055064828E495C54FF64A12EF052C77 /* Montserrat.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Montserrat";
+				INFOPLIST_FILE = "Target Support Files/Montserrat/ResourceBundle-Montserrat-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = Montserrat;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		3D37EF0DA13C4655790DBB2D80FC7D5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A055064828E495C54FF64A12EF052C77 /* Montserrat.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Montserrat/Montserrat-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Montserrat/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Montserrat/Montserrat.modulemap";
+				PRODUCT_MODULE_NAME = Montserrat;
+				PRODUCT_NAME = Montserrat;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5DC0083F57E9AB706B46C5B5D73B38D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		788849B706F46064629A1C92626160EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A055064828E495C54FF64A12EF052C77 /* Montserrat.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Montserrat/Montserrat-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Montserrat/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Montserrat/Montserrat.modulemap";
+				PRODUCT_MODULE_NAME = Montserrat;
+				PRODUCT_NAME = Montserrat;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		AEEA80476F98EB645C4DD53EB2BB6D88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		F1A1808BAC77F5E83CF3999827B86ED6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D013F7CD11DFA1B9503141ABD531323B /* Pods-Wolfram-Omega.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Wolfram-Omega/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Wolfram-Omega/Pods-Wolfram-Omega.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F58CF46539A900FFD42F2A6B6F0A77EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EADCA6B4A399493D24B17C6D603344F4 /* Pods-Wolfram-Omega.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Wolfram-Omega/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Wolfram-Omega/Pods-Wolfram-Omega.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DC0083F57E9AB706B46C5B5D73B38D8 /* Debug */,
+				AEEA80476F98EB645C4DD53EB2BB6D88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		32EF7A2A4D6B4CE01271488106330A80 /* Build configuration list for PBXNativeTarget "Pods-Wolfram-Omega" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F58CF46539A900FFD42F2A6B6F0A77EC /* Debug */,
+				F1A1808BAC77F5E83CF3999827B86ED6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8E18A6277D4270E013D49C14799568B9 /* Build configuration list for PBXNativeTarget "Montserrat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D37EF0DA13C4655790DBB2D80FC7D5D /* Debug */,
+				788849B706F46064629A1C92626160EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D5C3AB7E1369F58D23DB46AC5155B0F2 /* Build configuration list for PBXNativeTarget "Montserrat-Montserrat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BC8A5DEAC3430E23DD1144579F02014 /* Debug */,
+				2085DA4228A2A7C9B20FC3B55E219F9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
