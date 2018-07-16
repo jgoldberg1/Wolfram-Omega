@@ -23,6 +23,13 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    func checkIfValid(variable: String) {
+      if
+    }
+    
+    @IBAction func addButton(_ sender: Any) {
+        
+    }
+    
 }
 
