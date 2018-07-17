@@ -139,5 +139,10 @@ class AddVariablesViewController: UIViewController {
     
     
     
+<<<<<<< HEAD
+    
 
+=======
+>>>>>>> physics-symbols-functionality
 }
+
