@@ -19,7 +19,9 @@ class AddVariablesViewController: UIViewController {
     var variables = [String]()
     
     // array holding the currently accepted input words
-    var listOfAcceptedWords = ["acceleration", "energy", "force", "frequency", "height", "rotational inertia", "kinetic energy", "spring constant", "length", "angular momentum", "mass", "power", "momentum", "radius or distance", "period", "time", "potential energy", "velocity", "speed", "work done on a system", "position", "coefficient of friction", "angle", "torque", "angular speed", "angular acceleration", "phase angle", "velocity_0", "velocity"]
+    var listOfAcceptedWordsSymbolic = ["a", "E", "F", "f", "h", "I", "J", "K", "k", "l", "L", "m", "P", "p", "r", "T", "t", "U", "v", "W", "x", "mu", "theta", "tau", "omega", "alpha", "phi", "initial velocity"]
+    
+    var listOfAcceptedWordsWrittenOut = ["acceleration", "energy", "force", "frequency", "height", "rotational inertia","impulse", "kinetic energy", "spring constant", "length", "angular momentum", "mass", "power", "momentum", "radius or distance", "period", "time", "potential energy", "velocity", "speed", "work done on a system", "position", "coefficient of friction", "angle", "torque", "angular speed", "angular acceleration", "phase angle", "velocity_0", ]
     
     // array holding the formualas
     var formulaList = ["velocity(final)=velocity(initial)+acceleration*time",
@@ -72,11 +74,15 @@ class AddVariablesViewController: UIViewController {
     
     //this method should populate the table view with the variable the user entered
     @IBAction func addButtonPressed(_ sender: Any) {
-        if let currentText = variableTextField.text{
-            if listOfAcceptedWords.contains(currentText){
+        if var currentText = variableTextField.text{
+            if listOfAcceptedWordsSymbolic.contains(currentText) {
+                let writtenOutArrayIndex = listOfAcceptedWordsSymbolic.index(of: currentText)
+                print(writtenOutArrayIndex as Any)
+                currentText = listOfAcceptedWordsWrittenOut[writtenOutArrayIndex!]
                 // add the variable to the prototype cells
                 variableTextField.text = currentText
                 print("Accepted variable")
+<<<<<<< HEAD
                 variables.append(currentText)
                 variableTextField.text = ""
                 // call the new function here
@@ -98,6 +104,17 @@ class AddVariablesViewController: UIViewController {
                         
                     }}))
                 self.present(alert, animated: true, completion: nil)
+=======
+                //at this point, currentText is ready to be printed into a prototype cell
+                print(currentText)
+                
+            } else if listOfAcceptedWordsWrittenOut.contains(currentText) {
+                print(currentText)
+                
+            } else {
+                print("Mispelled \(currentText), please re-enter the variable")
+                variableTextField.text = ""
+>>>>>>> physics-symbols-functionality
             }
         }
         
@@ -110,6 +127,7 @@ class AddVariablesViewController: UIViewController {
         
     }
     
+<<<<<<< HEAD
 
     // function for adding variables to the tableview
     
@@ -132,7 +150,10 @@ class AddVariablesViewController: UIViewController {
 //    override func tableView(_ tableView: UITableViewCell, cellForRowAt: IndexPath) -> UITableViewCell {
 //        let cell = tableView.deq
 //    }
+=======
     
+    
+>>>>>>> physics-symbols-functionality
     
     
     
