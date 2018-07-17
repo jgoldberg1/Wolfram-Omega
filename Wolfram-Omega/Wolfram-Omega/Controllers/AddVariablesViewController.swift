@@ -9,7 +9,7 @@
 import UIKit
 
 class AddVariablesViewController: UIViewController {
-    
+
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var calculateButton: UIButton!
     @IBOutlet weak var variableTextField: UITextField!
@@ -74,28 +74,20 @@ class AddVariablesViewController: UIViewController {
     @IBAction func addButtonPressed(_ sender: Any) {
         if let currentText = variableTextField.text{
             if listOfAcceptedWords.contains(currentText){
-                // add the variable to the prototype cells
-                variableTextField.text = currentText
-                print("Accepted variable")
+                //addNewVariable(userText: currentText)
                 variables.append(currentText)
-                variableTextField.text = ""
-                // call the new function here
-                //addNewVariable()
+                
             }
             else{ //if they mispelled the variable
-                let alert = UIAlertController(title: "Mispelled Variable Name", message: "Could not find an existing physcis variable. Try typing the variable name again.", preferredStyle: UIAlertControllerStyle.alert)
+                let alert = UIAlertController(title: "Mispelled Variable Name", message: "Could not find an existing variable. Try typing the name again.", preferredStyle: UIAlertControllerStyle.alert)
                 alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
                     switch action.style{
                     case .default:
                         print("default")
-                        
                     case .cancel:
                         print("cancel")
-                        
                     case .destructive:
                         print("destructive")
-                        
-                        
                     }}))
                 self.present(alert, animated: true, completion: nil)
             }
@@ -113,17 +105,12 @@ class AddVariablesViewController: UIViewController {
 
     // function for adding variables to the tableview
     
-    func addNewVariable() {
-        print("hello")
+   /* func addNewVariable(userText: String) {
         let indexPath = IndexPath(row: variables.count-1, section: 0)
-        //tableView.beginUpdates()
-        print ("destroyed here")
-        tableView.insertRows(at: [indexPath], with: .automatic)
-        print("hi")
-        // destoryed on the line below
+        let cell = tableView.dequeueReusableCell(withIdentifier: "VariableCellView", for: indexPath) as! VariableCellView
+        cell.variableName.text = userText
         tableView.reloadData()
-        tableView.dequeueReusableCell(withIdentifier: "Variable", for: indexPath)
-    }
+    }*/
     
 //    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 //        return variables.count
