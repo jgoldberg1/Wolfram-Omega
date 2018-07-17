@@ -150,6 +150,7 @@
                                                 <constraint firstItem="V6e-L5-UoO" firstAttribute="leading" secondItem="S4I-5b-en0" secondAttribute="leadingMargin" constant="20" id="lEm-st-OOb"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration" identifier="variableCell"/>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddVariablesViewController: UIViewController {
+class AddVariablesViewController: UITableViewController {
     
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var calculateButton: UIButton!
@@ -45,10 +45,23 @@ class AddVariablesViewController: UIViewController {
         
     }
     
+    //tells how many cells should be displayed
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
     
+    //returns an instance of a stylized UITableVIewCell
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "variableCell", for: indexPath )
+        return cell
+    }
     
-    
-    
+    //implements a slide to delete feature, deletes the note if user slides that particular cell
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            //find the cell and delete it
+        }
+    }
     
     
     
