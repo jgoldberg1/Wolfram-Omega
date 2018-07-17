@@ -16,7 +16,11 @@ class AddVariablesViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     // array of variables user has entered
-    var variables = [String]()
+    var variables = [String]() {
+        didSet {
+            tableView.reloadData()
+        }
+    }
     
     // array holding the currently accepted input words
     var listOfAcceptedWords = ["acceleration", "energy", "force", "frequency", "height", "rotational inertia", "kinetic energy", "spring constant", "length", "angular momentum", "mass", "power", "momentum", "radius or distance", "period", "time", "potential energy", "velocity", "speed", "work done on a system", "position", "coefficient of friction", "angle", "torque", "angular speed", "angular acceleration", "phase angle", "velocity_0", "velocity"]
@@ -53,6 +57,9 @@ class AddVariablesViewController: UIViewController {
         
         super.viewDidLoad()
         
+        tableView.delegate = self
+        tableView.dataSource = self
+        
         //this set of code makes the add button and the calculate button look nicer
         addButton.layer.cornerRadius = 15
         addButton.layer.shadowColor = UIColor(red:0, green:0, blue:0, alpha: 0.25).cgColor
@@ -75,9 +82,11 @@ class AddVariablesViewController: UIViewController {
         if let currentText = variableTextField.text{
             if listOfAcceptedWords.contains(currentText){
                 // add the variable to the prototype cells
-                variableTextField.text = currentText
+//                variableTextField.text = currentText
+//                currentText = variableTextField.text!
                 print("Accepted variable")
                 variables.append(currentText)
+                print(variables)
                 variableTextField.text = ""
                 // call the new function here
                 //addNewVariable()
@@ -134,10 +143,28 @@ class AddVariablesViewController: UIViewController {
 //    }
     
     
-    
-    
-    
-    
-    
 
+}
+
+extension AddVariablesViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "variableCell", for: indexPath) as! VariableTableViewCell
+        print(variables.count)
+        
+        
+        let variable = variables[indexPath.row]
+
+//        cell.detailTextLabel?.text = "Wolfram Omega"
+        cell.variableLabel.text = variable
+        
+        return cell
+    }
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return variables.count
+    }
+    
 }
