@@ -37,6 +37,18 @@ class AddVariablesViewController: UIViewController {
                        "power=force*velocity",
                        "potential energy=mass*gravity*height"]
     
+    //dictionary that associates the string equivalent of the function with the image that is going to be displayed to the user
+   /* var formulasDictionary = ["velocity(final)=velocity(initial)+acceleration*time": #imageLiteral(resourceName: "find_velocity_with_time_and_accel"), "position=position(initial)+velocity(initial)*time+(1/2)acceleration*time^2": #imageLiteral(resourceName: "find_position"), "velocity(final)^2=velocity(initial)^2acceleration(position(final)-position(initial))": #imageLiteral(resourceName: "find_vel_w_accel_and_disp"), "acceleration=force/mass": #imageLiteral(resourceName: "accel_w_force_mass"), "force=position/time": ,
+        "impulse=force*time=momentum",
+        "momentum=mass*velocity": #imageLiteral(resourceName: "momentum w mass and vel"),
+        "force=coefficient of friction*force",
+        "energy=work=Force*radius",
+        "energy=work=Force*distance",
+        "kinetic energy=(1/2)mass*velocity^2": #imageLiteral(resourceName: "kinetic energy w mass and vel"),
+        "power=Energy/time",
+        "power=force*velocity": #imageLiteral(resourceName: "power w force and vel"),
+        "potential energy=mass*gravity*height": #imageLiteral(resourceName: "potential energy of grav") ]*/
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -68,7 +80,7 @@ class AddVariablesViewController: UIViewController {
                 variables.append(currentText)
                 variableTextField.text = ""
                 // call the new function here
-                addNewVariable()
+                //addNewVariable()
             }
             else{
                 print("Mispelled \(currentText), please re-enter the variable")
@@ -85,6 +97,7 @@ class AddVariablesViewController: UIViewController {
         
     }
     
+<<<<<<< HEAD
     // function for adding variables to the tableview
     
     func addNewVariable() {
@@ -113,4 +126,6 @@ class AddVariablesViewController: UIViewController {
     
     
     
+=======
+>>>>>>> 687a54596015842ddc19b0fad5e6089e3f434f46
 }
