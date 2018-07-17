@@ -72,15 +72,28 @@ class AddVariablesViewController: UIViewController {
         if let currentText = variableTextField.text{
             if listOfAcceptedWords.contains(currentText){
                 // add the variable to the prototype cells
-                //variableTextField.text = "it works, placeholder text"
+                variableTextField.text = currentText
                 print("Accepted variable")
                 variableTextField.text = ""
                 
                 
             }
-            else{
-                print("Mispelled \(currentText), please re-enter the variable")
-                variableTextField.text = ""
+            else{ //if they mispelled the variable
+                let alert = UIAlertController(title: "Mispelled Variable Name", message: "Could not find an existing physcis variable. Try typing the variable name again.", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+                    switch action.style{
+                    case .default:
+                        print("default")
+                        
+                    case .cancel:
+                        print("cancel")
+                        
+                    case .destructive:
+                        print("destructive")
+                        
+                        
+                    }}))
+                self.present(alert, animated: true, completion: nil)
             }
         }
         

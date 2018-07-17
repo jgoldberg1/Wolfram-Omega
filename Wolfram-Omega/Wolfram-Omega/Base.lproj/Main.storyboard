@@ -186,10 +186,10 @@
             </objects>
             <point key="canvasLocation" x="965.60000000000002" y="133.5832083958021"/>
         </scene>
-        <!--View Controller-->
+        <!--Formula View Controller-->
         <scene sceneID="Mvg-Xi-erH">
             <objects>
-                <viewController id="IJO-l0-vNR" sceneMemberID="viewController">
+                <viewController id="IJO-l0-vNR" customClass="FormulaViewController" customModule="Wolfram_Omega" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YAG-uB-BQl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -221,15 +221,32 @@
                                 <color key="textColor" red="0.1720898449420929" green="0.66358476877212524" blue="0.84095078706741333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G8u-7u-hhx">
+                                <rect key="frame" x="25" y="627" width="325" height="30"/>
+                                <color key="backgroundColor" red="0.87843137250000003" green="0.19215686269999999" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="15"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismissFormulaView:" destination="IJO-l0-vNR" eventType="touchUpInside" id="bEc-qL-JFB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="G8u-7u-hhx" firstAttribute="leading" secondItem="9ci-OR-T7U" secondAttribute="leading" constant="25" id="7Eh-NR-bVH"/>
                             <constraint firstItem="sri-Jr-Beg" firstAttribute="leading" secondItem="9ci-OR-T7U" secondAttribute="leading" constant="25" id="G7b-mX-ZLm"/>
+                            <constraint firstItem="9ci-OR-T7U" firstAttribute="trailing" secondItem="G8u-7u-hhx" secondAttribute="trailing" constant="25" id="S2W-wm-jpa"/>
                             <constraint firstItem="sri-Jr-Beg" firstAttribute="top" secondItem="9ci-OR-T7U" secondAttribute="top" constant="25" id="aoX-bC-juP"/>
                             <constraint firstAttribute="trailing" secondItem="sri-Jr-Beg" secondAttribute="trailing" constant="25" id="g9b-wJ-laV"/>
+                            <constraint firstItem="9ci-OR-T7U" firstAttribute="bottom" secondItem="G8u-7u-hhx" secondAttribute="bottom" constant="10" id="qK4-zk-O9q"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9ci-OR-T7U"/>
                     </view>
+                    <connections>
+                        <outlet property="backButton" destination="G8u-7u-hhx" id="qEe-Yd-wz7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d0t-FC-WYP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
