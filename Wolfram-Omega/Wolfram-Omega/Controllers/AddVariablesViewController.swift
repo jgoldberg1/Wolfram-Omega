@@ -126,8 +126,6 @@ class AddVariablesViewController: UIViewController {
     //this method should take the user to the next page and display the formulas the user should use based on the variables they gave
     //WARNING! THE BELOW FUNCTION GIVES ME AN ERROR FOR SOME REASON.
   //  @IBAction func calculateButtonPressed(_ sender: Any) {
-        
-    }
     
 
 
