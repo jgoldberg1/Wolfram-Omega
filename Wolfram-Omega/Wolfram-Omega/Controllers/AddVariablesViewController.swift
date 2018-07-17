@@ -15,6 +15,9 @@ class AddVariablesViewController: UIViewController {
     @IBOutlet weak var variableTextField: UITextField!
     @IBOutlet weak var tableView: UITableView!
     
+    // array of variables user has entered
+    var variables = [String]()
+    
     // array holding the currently accepted input words
     var listOfAcceptedWords = ["acceleration", "energy", "force", "frequency", "height", "rotational inertia", "kinetic energy", "spring constant", "length", "angular momentum", "mass", "power", "momentum", "radius or distance", "period", "time", "potential energy", "velocity", "speed", "work done on a system", "position", "coefficient of friction", "angle", "torque", "angular speed", "angular acceleration", "phase angle", "velocity_0", "velocity"]
     
@@ -62,9 +65,10 @@ class AddVariablesViewController: UIViewController {
                 // add the variable to the prototype cells
                 //variableTextField.text = "it works, placeholder text"
                 print("Accepted variable")
+                variables.append(currentText)
                 variableTextField.text = ""
-                
-                
+                // call the new function here
+                addNewVariable()
             }
             else{
                 print("Mispelled \(currentText), please re-enter the variable")
@@ -81,7 +85,27 @@ class AddVariablesViewController: UIViewController {
         
     }
     
+    // function for adding variables to the tableview
     
+    func addNewVariable() {
+        print("hello")
+        let indexPath = IndexPath(row: variables.count-1, section: 0)
+//        //tableView.beginUpdates()
+//        print ("destroyed here")
+//        tableView.insertRows(at: [indexPath], with: .automatic)
+//        print("hi")
+//        // destoryed on the line below
+//        tableView.reloadData()
+        tableView.dequeueReusableCell(withIdentifier: "Variable", for: indexPath)
+    }
+    
+//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return variables.count
+//    }
+//
+//    override func tableView(_ tableView: UITableViewCell, cellForRowAt: IndexPath) -> UITableViewCell {
+//        let cell = tableView.deq
+//    }
     
     
     
