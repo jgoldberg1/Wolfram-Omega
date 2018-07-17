@@ -72,9 +72,12 @@ class AddVariablesViewController: UIViewController {
     
     //this method should populate the table view with the variable the user entered
     @IBAction func addButtonPressed(_ sender: Any) {
+<<<<<<< HEAD
         if let currentText = variableTextField.text{
             if listOfAcceptedWords.contains(currentText){
                 //addNewVariable(userText: currentText)
+<<<<<<< HEAD
+>>>>>>> fb93ac120b7d666dfd4c601b799203e6248c68a4
                 variables.append(currentText)
                 
             }
@@ -90,6 +93,8 @@ class AddVariablesViewController: UIViewController {
                         print("destructive")
                     }}))
                 self.present(alert, animated: true, completion: nil)
+=======
+>>>>>>> physics-symbols-functionality
             }
         }
         
@@ -102,6 +107,7 @@ class AddVariablesViewController: UIViewController {
         
     }
     
+<<<<<<< HEAD
 
     // function for adding variables to the tableview
     
@@ -119,12 +125,20 @@ class AddVariablesViewController: UIViewController {
 //    override func tableView(_ tableView: UITableViewCell, cellForRowAt: IndexPath) -> UITableViewCell {
 //        let cell = tableView.deq
 //    }
+=======
+    
+    
+>>>>>>> physics-symbols-functionality
     
     
     
     
     
     
+<<<<<<< HEAD
     
 
+=======
+>>>>>>> physics-symbols-functionality
 }
+
