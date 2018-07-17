@@ -19,7 +19,9 @@ class AddVariablesViewController: UIViewController {
     var variables = [String]()
     
     // array holding the currently accepted input words
-    var listOfAcceptedWords = ["acceleration", "energy", "force", "frequency", "height", "rotational inertia", "kinetic energy", "spring constant", "length", "angular momentum", "mass", "power", "momentum", "radius or distance", "period", "time", "potential energy", "velocity", "speed", "work done on a system", "position", "coefficient of friction", "angle", "torque", "angular speed", "angular acceleration", "phase angle", "velocity_0", "velocity"]
+    var listOfAcceptedWordsSymbolic = ["a", "E", "F", "f", "h", "I", "J", "K", "k", "l", "L", "m", "P", "p", "r", "T", "t", "U", "v", "W", "x", "mu", "theta", "tau", "omega", "alpha", "phi", "initial velocity"]
+    
+    var listOfAcceptedWordsWrittenOut = ["acceleration", "energy", "force", "frequency", "height", "rotational inertia","impulse", "kinetic energy", "spring constant", "length", "angular momentum", "mass", "power", "momentum", "radius or distance", "period", "time", "potential energy", "velocity", "speed", "work done on a system", "position", "coefficient of friction", "angle", "torque", "angular speed", "angular acceleration", "phase angle", "velocity_0", ]
     
     // array holding the formualas
     var formulaList = ["velocity(final)=velocity(initial)+acceleration*time",
@@ -76,6 +78,15 @@ class AddVariablesViewController: UIViewController {
         if let currentText = variableTextField.text{
             if listOfAcceptedWords.contains(currentText){
                 //addNewVariable(userText: currentText)
+=======
+        if var currentText = variableTextField.text{
+            if listOfAcceptedWordsSymbolic.contains(currentText) {
+                let writtenOutArrayIndex = listOfAcceptedWordsSymbolic.index(of: currentText)
+                print(writtenOutArrayIndex as Any)
+                currentText = listOfAcceptedWordsWrittenOut[writtenOutArrayIndex!]
+                // add the variable to the prototype cells
+                variableTextField.text = currentText
+                print("Accepted variable")
 <<<<<<< HEAD
 >>>>>>> fb93ac120b7d666dfd4c601b799203e6248c68a4
                 variables.append(currentText)
@@ -94,6 +105,15 @@ class AddVariablesViewController: UIViewController {
                     }}))
                 self.present(alert, animated: true, completion: nil)
 =======
+                //at this point, currentText is ready to be printed into a prototype cell
+                print(currentText)
+                
+            } else if listOfAcceptedWordsWrittenOut.contains(currentText) {
+                print(currentText)
+                
+            } else {
+                print("Mispelled \(currentText), please re-enter the variable")
+                variableTextField.text = ""
 >>>>>>> physics-symbols-functionality
             }
         }
