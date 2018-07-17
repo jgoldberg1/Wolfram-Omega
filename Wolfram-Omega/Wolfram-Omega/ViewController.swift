@@ -9,6 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+    // array of accepted words
+    var listOfAcceptedWords = ["acceleration", "energy", "force", "frequency", "height", "rotational inertia", "kinetic energy", "spring constant", "length", "angular momentum", "mass", "power", "momentum", "radius or distance", "period", "time", "potential energy", "velocity", "speed", "work done on a system", "position", "coefficient of friction", "angle", "torque", "angular speed", "angular acceleration", "phase angle", "velocity_0", "velocity"]
     
     @IBOutlet weak var continueButton: UIButton!
 
@@ -24,7 +26,9 @@ class ViewController: UIViewController {
     }
 
     func checkIfValid(variable: String) {
-      if
+        if !listOfAcceptedWords.contains(variable){
+            print("You mispelled \(variable). Please re-enter it :)")
+        }
     }
     
     @IBAction func addButton(_ sender: Any) {
