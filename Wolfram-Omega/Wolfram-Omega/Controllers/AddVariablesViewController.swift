@@ -81,12 +81,4 @@ class AddVariablesViewController: UIViewController {
         
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
 }
