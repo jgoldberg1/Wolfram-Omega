@@ -9,7 +9,7 @@
 import UIKit
 
 class AddVariablesViewController: UIViewController {
-    
+
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var calculateButton: UIButton!
     @IBOutlet weak var variableTextField: UITextField!
@@ -23,7 +23,9 @@ class AddVariablesViewController: UIViewController {
     }
     
     // array holding the currently accepted input words
-    var listOfAcceptedWords = ["acceleration", "energy", "force", "frequency", "height", "rotational inertia", "kinetic energy", "spring constant", "length", "angular momentum", "mass", "power", "momentum", "radius or distance", "period", "time", "potential energy", "velocity", "speed", "work done on a system", "position", "coefficient of friction", "angle", "torque", "angular speed", "angular acceleration", "phase angle", "velocity_0", "velocity"]
+    var listOfAcceptedWordsSymbolic = ["a", "E", "F", "f", "h", "I", "J", "K", "k", "l", "L", "m", "P", "p", "r", "T", "t", "U", "v", "W", "x", "mu", "theta", "tau", "omega", "alpha", "phi", "initial velocity"]
+    
+    var listOfAcceptedWordsWrittenOut = ["acceleration", "energy", "force", "frequency", "height", "rotational inertia","impulse", "kinetic energy", "spring constant", "length", "angular momentum", "mass", "power", "momentum", "radius or distance", "period", "time", "potential energy", "velocity", "speed", "work done on a system", "position", "coefficient of friction", "angle", "torque", "angular speed", "angular acceleration", "phase angle", "velocity_0", ]
     
     // array holding the formualas
     var formulaList = ["velocity(final)=velocity(initial)+acceleration*time",
@@ -79,34 +81,41 @@ class AddVariablesViewController: UIViewController {
     
     //this method should populate the table view with the variable the user entered
     @IBAction func addButtonPressed(_ sender: Any) {
-        if let currentText = variableTextField.text{
-            if listOfAcceptedWords.contains(currentText){
+        
+        if var currentText = variableTextField.text{
+            if listOfAcceptedWordsSymbolic.contains(currentText) {
+                let writtenOutArrayIndex = listOfAcceptedWordsSymbolic.index(of: currentText)
+                print(writtenOutArrayIndex as Any)
+                currentText = listOfAcceptedWordsWrittenOut[writtenOutArrayIndex!]
                 // add the variable to the prototype cells
 //                variableTextField.text = currentText
 //                currentText = variableTextField.text!
                 print("Accepted variable")
+
                 variables.append(currentText)
-                print(variables)
-                variableTextField.text = ""
-                // call the new function here
-                //addNewVariable()
-            }
-            else{ //if they mispelled the variable
-                let alert = UIAlertController(title: "Mispelled Variable Name", message: "Could not find an existing physcis variable. Try typing the variable name again.", preferredStyle: UIAlertControllerStyle.alert)
+                
+            } else if listOfAcceptedWordsWrittenOut.contains(currentText) {
+                print(currentText)
+                
+            } else { //if they mispelled the variable
+                let alert = UIAlertController(title: "Mispelled Variable Name", message: "Could not find an existing variable. Try typing the name again.", preferredStyle: UIAlertControllerStyle.alert)
                 alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
                     switch action.style{
                     case .default:
                         print("default")
-                        
                     case .cancel:
                         print("cancel")
-                        
                     case .destructive:
                         print("destructive")
-                        
-                        
                     }}))
                 self.present(alert, animated: true, completion: nil)
+
+                //at this point, currentText is ready to be printed into a prototype cell
+                print(currentText)
+                
+ 
+                
+
             }
         }
         
@@ -115,24 +124,21 @@ class AddVariablesViewController: UIViewController {
     }
     
     //this method should take the user to the next page and display the formulas the user should use based on the variables they gave
-    @IBAction func calculateButtonPressed(_ sender: Any) {
+    //WARNING! THE BELOW FUNCTION GIVES ME AN ERROR FOR SOME REASON.
+  //  @IBAction func calculateButtonPressed(_ sender: Any) {
         
     }
     
 
+
     // function for adding variables to the tableview
     
-    func addNewVariable() {
-        print("hello")
+   /* func addNewVariable(userText: String) {
         let indexPath = IndexPath(row: variables.count-1, section: 0)
-        //tableView.beginUpdates()
-        print ("destroyed here")
-        tableView.insertRows(at: [indexPath], with: .automatic)
-        print("hi")
-        // destoryed on the line below
+        let cell = tableView.dequeueReusableCell(withIdentifier: "VariableCellView", for: indexPath) as! VariableCellView
+        cell.variableName.text = userText
         tableView.reloadData()
-        tableView.dequeueReusableCell(withIdentifier: "Variable", for: indexPath)
-    }
+    }*/
     
 //    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 //        return variables.count
@@ -168,3 +174,5 @@ extension AddVariablesViewController: UITableViewDelegate, UITableViewDataSource
     }
     
 }
+
+
