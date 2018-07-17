@@ -184,6 +184,8 @@
                     <connections>
                         <outlet property="addButton" destination="YSg-sA-B82" id="OW4-4q-fdN"/>
                         <outlet property="calculateButton" destination="383-pT-Gp0" id="QUA-Gk-VLI"/>
+                        <outlet property="tableView" destination="vvI-n7-byd" id="vqA-KI-yrf"/>
+                        <outlet property="variableTextField" destination="MQL-YJ-PI1" id="kxh-DC-5Qe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eck-S2-87p" userLabel="First Responder" sceneMemberID="firstResponder"/>

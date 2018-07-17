@@ -12,7 +12,27 @@ class AddVariablesViewController: UIViewController {
     
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var calculateButton: UIButton!
+    @IBOutlet weak var variableTextField: UITextField!
+    @IBOutlet weak var tableView: UITableView!
     
+    // array holding the currently accepted input words
+    var listOfAcceptedWords = ["acceleration", "energy", "force", "frequency", "height", "rotational inertia", "kinetic energy", "spring constant", "length", "angular momentum", "mass", "power", "momentum", "radius or distance", "period", "time", "potential energy", "velocity", "speed", "work done on a system", "position", "coefficient of friction", "angle", "torque", "angular speed", "angular acceleration", "phase angle", "velocity_0", "velocity"]
+    
+    // array holding the formualas
+    var formulaList = ["velocity(final)=velocity(initial)+acceleration*time",
+                       "position=position(initial)+velocity(initial)*time+(1/2)acceleration*time^2",
+                       "velocity(final)^2=velocity(initial)^2acceleration(position(final)-position(initial))",
+                       "acceleration=force/mass",
+                       "force=position/time",
+                       "impulse=force*time=momentum",
+                       "momentum=mass*velocity",
+                       "force=coefficient of friction*force",
+                       "energy=work=Force*radius",
+                       "energy=work=Force*distance",
+                       "kinetic energy=(1/2)mass*velocity^2",
+                       "power=Energy/time",
+                       "power=force*velocity",
+                       "potential energy=mass*gravity*height"]
     
     override func viewDidLoad() {
         
@@ -37,7 +57,23 @@ class AddVariablesViewController: UIViewController {
     
     //this method should populate the table view with the variable the user entered
     @IBAction func addButtonPressed(_ sender: Any) {
-    
+        if let currentText = variableTextField.text{
+            if listOfAcceptedWords.contains(currentText){
+                // add the variable to the prototype cells
+                //variableTextField.text = "it works, placeholder text"
+                print("Accepted variable")
+                variableTextField.text = ""
+                
+                
+            }
+            else{
+                print("Mispelled \(currentText), please re-enter the variable")
+                variableTextField.text = ""
+            }
+        }
+        
+        
+        
     }
     
     //this method should take the user to the next page and display the formulas the user should use based on the variables they gave
