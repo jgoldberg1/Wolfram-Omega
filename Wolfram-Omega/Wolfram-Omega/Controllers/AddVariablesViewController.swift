@@ -97,18 +97,18 @@ class AddVariablesViewController: UIViewController {
         
     }
     
-<<<<<<< HEAD
+
     // function for adding variables to the tableview
     
     func addNewVariable() {
         print("hello")
         let indexPath = IndexPath(row: variables.count-1, section: 0)
-//        //tableView.beginUpdates()
-//        print ("destroyed here")
-//        tableView.insertRows(at: [indexPath], with: .automatic)
-//        print("hi")
-//        // destoryed on the line below
-//        tableView.reloadData()
+        //tableView.beginUpdates()
+        print ("destroyed here")
+        tableView.insertRows(at: [indexPath], with: .automatic)
+        print("hi")
+        // destoryed on the line below
+        tableView.reloadData()
         tableView.dequeueReusableCell(withIdentifier: "Variable", for: indexPath)
     }
     
@@ -126,6 +126,5 @@ class AddVariablesViewController: UIViewController {
     
     
     
-=======
->>>>>>> 687a54596015842ddc19b0fad5e6089e3f434f46
+
 }
