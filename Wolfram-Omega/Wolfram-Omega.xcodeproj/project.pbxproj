@@ -12,12 +12,10 @@
 		352A4F9920FD1C9700AED264 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 352A4F9720FD1C9700AED264 /* Main.storyboard */; };
 		352A4F9B20FD1C9800AED264 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 352A4F9A20FD1C9800AED264 /* Assets.xcassets */; };
 		352A4F9E20FD1C9800AED264 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 352A4F9C20FD1C9800AED264 /* LaunchScreen.storyboard */; };
-		EC41D3A2173FE2842659A4CD /* Pods_Wolfram_Omega.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C841CBDABEF9E8F6ECD891C /* Pods_Wolfram_Omega.framework */; };
+		355A233A20FD95DC0086191B /* AddVariablesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355A233920FD95DC0086191B /* AddVariablesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2C841CBDABEF9E8F6ECD891C /* Pods_Wolfram_Omega.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wolfram_Omega.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		31FF2103A5D97643F1957184 /* Pods-Wolfram-Omega.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wolfram-Omega.release.xcconfig"; path = "Pods/Target Support Files/Pods-Wolfram-Omega/Pods-Wolfram-Omega.release.xcconfig"; sourceTree = "<group>"; };
 		352A4F9020FD1C9700AED264 /* Wolfram-Omega.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wolfram-Omega.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		352A4F9320FD1C9700AED264 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		352A4F9520FD1C9700AED264 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -25,7 +23,7 @@
 		352A4F9A20FD1C9800AED264 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		352A4F9D20FD1C9800AED264 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		352A4F9F20FD1C9800AED264 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9B75362960DFECB1B343342D /* Pods-Wolfram-Omega.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wolfram-Omega.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Wolfram-Omega/Pods-Wolfram-Omega.debug.xcconfig"; sourceTree = "<group>"; };
+		355A233920FD95DC0086191B /* AddVariablesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVariablesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,29 +31,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC41D3A2173FE2842659A4CD /* Pods_Wolfram_Omega.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		047120370F405F1CA8A4BE1B /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				9B75362960DFECB1B343342D /* Pods-Wolfram-Omega.debug.xcconfig */,
-				31FF2103A5D97643F1957184 /* Pods-Wolfram-Omega.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		352A4F8720FD1C9700AED264 = {
 			isa = PBXGroup;
 			children = (
 				352A4F9220FD1C9700AED264 /* Wolfram-Omega */,
 				352A4F9120FD1C9700AED264 /* Products */,
-				047120370F405F1CA8A4BE1B /* Pods */,
-				BC9F7DC149AFA9FD3A0F0203 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,8 +56,8 @@
 		352A4F9220FD1C9700AED264 /* Wolfram-Omega */ = {
 			isa = PBXGroup;
 			children = (
+				355A233820FD95BD0086191B /* Controllers */,
 				352A4F9320FD1C9700AED264 /* AppDelegate.swift */,
-				352A4F9520FD1C9700AED264 /* ViewController.swift */,
 				352A4F9720FD1C9700AED264 /* Main.storyboard */,
 				352A4F9A20FD1C9800AED264 /* Assets.xcassets */,
 				352A4F9C20FD1C9800AED264 /* LaunchScreen.storyboard */,
@@ -80,12 +66,13 @@
 			path = "Wolfram-Omega";
 			sourceTree = "<group>";
 		};
-		BC9F7DC149AFA9FD3A0F0203 /* Frameworks */ = {
+		355A233820FD95BD0086191B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				2C841CBDABEF9E8F6ECD891C /* Pods_Wolfram_Omega.framework */,
+				352A4F9520FD1C9700AED264 /* ViewController.swift */,
+				355A233920FD95DC0086191B /* AddVariablesViewController.swift */,
 			);
-			name = Frameworks;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,11 +82,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 352A4FA220FD1C9800AED264 /* Build configuration list for PBXNativeTarget "Wolfram-Omega" */;
 			buildPhases = (
-				399F643E118CB6A8028195E7 /* [CP] Check Pods Manifest.lock */,
 				352A4F8C20FD1C9700AED264 /* Sources */,
 				352A4F8D20FD1C9700AED264 /* Frameworks */,
 				352A4F8E20FD1C9700AED264 /* Resources */,
-				A1CEA9D76D43C71C0174FCE2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -156,45 +141,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		399F643E118CB6A8028195E7 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Wolfram-Omega-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A1CEA9D76D43C71C0174FCE2 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Wolfram-Omega/Pods-Wolfram-Omega-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Montserrat/Montserrat.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Montserrat.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Wolfram-Omega/Pods-Wolfram-Omega-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		352A4F8C20FD1C9700AED264 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -202,6 +148,7 @@
 			files = (
 				352A4F9620FD1C9700AED264 /* ViewController.swift in Sources */,
 				352A4F9420FD1C9700AED264 /* AppDelegate.swift in Sources */,
+				355A233A20FD95DC0086191B /* AddVariablesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,7 +290,6 @@
 		};
 		352A4FA320FD1C9800AED264 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9B75362960DFECB1B343342D /* Pods-Wolfram-Omega.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -361,7 +307,6 @@
 		};
 		352A4FA420FD1C9800AED264 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 31FF2103A5D97643F1957184 /* Pods-Wolfram-Omega.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
