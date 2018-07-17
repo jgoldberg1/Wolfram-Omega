@@ -143,17 +143,11 @@
                                                     <color key="textColor" red="0.1720898449420929" green="0.66358476877212524" blue="0.84095078706741333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h11-1V-fER">
-                                                    <rect key="frame" x="256" y="6" width="51" height="31"/>
-                                                </switch>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="h11-1V-fER" secondAttribute="trailing" constant="20" id="3P8-9B-aOH"/>
                                                 <constraint firstItem="V6e-L5-UoO" firstAttribute="top" secondItem="S4I-5b-en0" secondAttribute="topMargin" id="AU1-MI-w3e"/>
-                                                <constraint firstItem="h11-1V-fER" firstAttribute="top" secondItem="S4I-5b-en0" secondAttribute="top" constant="6" id="am9-sJ-Lkd"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="V6e-L5-UoO" secondAttribute="bottom" id="dnl-v0-gBB"/>
                                                 <constraint firstItem="V6e-L5-UoO" firstAttribute="leading" secondItem="S4I-5b-en0" secondAttribute="leadingMargin" constant="20" id="lEm-st-OOb"/>
-                                                <constraint firstAttribute="bottom" secondItem="h11-1V-fER" secondAttribute="bottom" constant="6" id="v3L-lt-vMi"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
