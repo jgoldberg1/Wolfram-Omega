@@ -65,7 +65,7 @@ class AddVariablesViewController: UIViewController {
     var listOfAcceptedWordsWrittenOut = ["acceleration", "energy", "force", "frequency", "height", "rotational inertia", "kinetic energy", "spring constant", "length", "angular momentum", "mass", "power", "momentum", "radius", "distance", "period", "time", "potential energy", "velocity", "speed", "work done on a system", "position", "coefficient of friction", "angle", "torque", "angular speed", "angular acceleration", "phase angle", "velocity_0", "velocity"]
     
     //dictionary that associates the string equivalent of the function with the image that is going to be displayed to the user
-    /* var formulasDictionary = ["velocity(final)=velocity(initial)+acceleration*time": #imageLiteral(resourceName: "find_velocity_with_time_and_accel"), "position=position(initial)+velocity(initial)*time+(1/2)acceleration*time^2": #imageLiteral(resourceName: "find_position"), "velocity(final)^2=velocity(initial)^2acceleration(position(final)-position(initial))": #imageLiteral(resourceName: "find_vel_w_accel_and_disp"), "acceleration=force/mass": #imageLiteral(resourceName: "accel_w_force_mass"), "force=position/time": ,
+    /*var formulasDictionary = ["velocity(final)=velocity(initial)+acceleration*time": #imageLiteral(resourceName: "find_velocity_with_time_and_accel"), "position=position(initial)+velocity(initial)*time+(1/2)acceleration*time^2": #imageLiteral(resourceName: "find_position"), "velocity(final)^2=velocity(initial)^2acceleration(position(final)-position(initial))": #imageLiteral(resourceName: "find_vel_w_accel_and_disp"), "acceleration=force/mass": #imageLiteral(resourceName: "accel_w_force_mass"), "force=position/time": ,
      "impulse=force*time=momentum",
      "momentum=mass*velocity": #imageLiteral(resourceName: "momentum w mass and vel"),
      "force=coefficient of friction*force",
@@ -202,7 +202,6 @@ class AddVariablesViewController: UIViewController {
     }
     
     
-    // function for adding variables to the tableview
     
     func addNewVariable() {
         print("hello")
@@ -243,8 +242,7 @@ extension AddVariablesViewController: UITableViewDelegate, UITableViewDataSource
         
         
         let variable = variables[indexPath.row]
-        
-        //        cell.detailTextLabel?.text = "Wolfram Omega"
+        //display a cell with the variable that the user typed after they click add
         cell.variableLabel.text = variable
         
         return cell
