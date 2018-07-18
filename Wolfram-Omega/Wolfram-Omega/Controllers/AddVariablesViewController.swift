@@ -174,7 +174,7 @@ class AddVariablesViewController: UIViewController {
                 self.present(alert, animated: true, completion: nil)
             }
         }
-        
+    }
     
         
 
@@ -229,7 +229,7 @@ class AddVariablesViewController: UIViewController {
 
 
 
-    }
+    
 }
 
 
