@@ -42,7 +42,7 @@ class AddVariablesViewController: UIViewController {
                        "potential energy=mass*gravity*height"]
     
     //dictionary that associates the string equivalent of the function with the image that is going to be displayed to the user
-    /* var formulasDictionary = ["velocity(final)=velocity(initial)+acceleration*time": #imageLiteral(resourceName: "find_velocity_with_time_and_accel"), "position=position(initial)+velocity(initial)*time+(1/2)acceleration*time^2": #imageLiteral(resourceName: "find_position"), "velocity(final)^2=velocity(initial)^2acceleration(position(final)-position(initial))": #imageLiteral(resourceName: "find_vel_w_accel_and_disp"), "acceleration=force/mass": #imageLiteral(resourceName: "accel_w_force_mass"), "force=position/time": ,
+    /*var formulasDictionary = ["velocity(final)=velocity(initial)+acceleration*time": #imageLiteral(resourceName: "find_velocity_with_time_and_accel"), "position=position(initial)+velocity(initial)*time+(1/2)acceleration*time^2": #imageLiteral(resourceName: "find_position"), "velocity(final)^2=velocity(initial)^2acceleration(position(final)-position(initial))": #imageLiteral(resourceName: "find_vel_w_accel_and_disp"), "acceleration=force/mass": #imageLiteral(resourceName: "accel_w_force_mass"), "force=position/time": ,
      "impulse=force*time=momentum",
      "momentum=mass*velocity": #imageLiteral(resourceName: "momentum w mass and vel"),
      "force=coefficient of friction*force",
@@ -80,19 +80,16 @@ class AddVariablesViewController: UIViewController {
     //this method should populate the table view with the variable the user entered
     @IBAction func addButtonPressed(_ sender: Any) {
         if let currentText = variableTextField.text{
+            //if the word is a valid physics word
             if listOfAcceptedWords.contains(currentText){
-                // add the variable to the prototype cells
-                //                variableTextField.text = currentText
-                //                currentText = variableTextField.text!
+                // add the variable to the prototype cells and the variable array that stores the variables that the user wants to find a function for
                 print("Accepted variable")
                 variables.append(currentText)
                 print(variables)
                 variableTextField.text = ""
-                // call the new function here
-                //addNewVariable()
             }
-            else{ //if they mispelled the variable
-                let alert = UIAlertController(title: "Mispelled Variable Name", message: "Could not find an existing physcis variable. Try typing the variable name again.", preferredStyle: UIAlertControllerStyle.alert)
+            else{ //if they mispelled the variable, display an UIAlert dialog box
+                let alert = UIAlertController(title: "Mispelled Variable Name", message: "Oops, seems like you meant to type something else. Try typing the name again.", preferredStyle: UIAlertControllerStyle.alert)
                 alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
                     switch action.style{
                     case .default:
@@ -120,29 +117,6 @@ class AddVariablesViewController: UIViewController {
     }
     
     
-    // function for adding variables to the tableview
-    
-    func addNewVariable() {
-        print("hello")
-        let indexPath = IndexPath(row: variables.count-1, section: 0)
-        //tableView.beginUpdates()
-        print ("destroyed here")
-        tableView.insertRows(at: [indexPath], with: .automatic)
-        print("hi")
-        // destoryed on the line below
-        tableView.reloadData()
-        tableView.dequeueReusableCell(withIdentifier: "Variable", for: indexPath)
-    }
-    
-    //    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    //        return variables.count
-    //    }
-    //
-    //    override func tableView(_ tableView: UITableViewCell, cellForRowAt: IndexPath) -> UITableViewCell {
-    //        let cell = tableView.deq
-    //    }
-    
-    
     
 }
 
@@ -155,8 +129,7 @@ extension AddVariablesViewController: UITableViewDelegate, UITableViewDataSource
         
         
         let variable = variables[indexPath.row]
-        
-        //        cell.detailTextLabel?.text = "Wolfram Omega"
+        //display a cell with the variable that the user typed after they click add
         cell.variableLabel.text = variable
         
         return cell
