@@ -60,20 +60,60 @@ class AddVariablesViewController: UIViewController {
         "position=position_maxcos(angular speed*time+phase angle)",
         "potential energy=(1/2)spring constant*position^2",
         "force=-spring constant*position",
-        "angle=angle_0+angular speed_0*time+(1/2)angular acceleration*time^2"
+        "angle=angle_0+angular speed_0*time+(1/2)angular acceleration*time^2"//done,
+        
 ]
     
     //dictionary that associates the string equivalent of the function with the image that is going to be displayed to the user
-    /* var formulasDictionary = ["velocity(final)=velocity(initial)+acceleration*time": #imageLiteral(resourceName: "find_velocity_with_time_and_accel"), "position=position(initial)+velocity(initial)*time+(1/2)acceleration*time^2": #imageLiteral(resourceName: "find_position"), "velocity(final)^2=velocity(initial)^2acceleration(position(final)-position(initial))": #imageLiteral(resourceName: "find_vel_w_accel_and_disp"), "acceleration=force/mass": #imageLiteral(resourceName: "accel_w_force_mass"), "force=position/time": ,
-     "impulse=force*time=momentum",
-     "momentum=mass*velocity": #imageLiteral(resourceName: "momentum w mass and vel"),
-     "force=coefficient of friction*force",
-     "energy=work=Force*radius",
-     "energy=work=Force*distance",
-     "kinetic energy=(1/2)mass*velocity^2": #imageLiteral(resourceName: "kinetic energy w mass and vel"),
-     "power=Energy/time",
-     "power=force*velocity": #imageLiteral(resourceName: "power w force and vel"),
-     "potential energy=mass*gravity*height": #imageLiteral(resourceName: "potential energy of grav") ]*/
+//     var formulasDictionary = ["velocity(final)=velocity(initial)+acceleration*time": #imageLiteral(resourceName: "find_velocity_with_time_and_accel"), "position=position(initial)+velocity(initial)*time+(1/2)acceleration*time^2": #imageLiteral(resourceName: "find_position"), "velocity(final)^2=velocity(initial)^2acceleration(position(final)-position(initial))": #imageLiteral(resourceName: "find_vel_w_accel_and_disp"), "acceleration=force/mass": #imageLiteral(resourceName: "accel_w_force_mass"), "force=position/time": ,
+//     "impulse=force*time=momentum",
+//     "momentum=mass*velocity": #imageLiteral(resourceName: "momentum w mass and vel"),
+//     "force=coefficient of friction*force",
+//     "energy=work=Force*radius",
+//     "energy=work=Force*distance",
+//     "kinetic energy=(1/2)mass*velocity^2": #imageLiteral(resourceName: "kinetic energy w mass and vel"),
+//     "power=Energy/time",
+//     "power=force*velocity": #imageLiteral(resourceName: "power w force and vel"),
+//     "potential energy=mass*gravity*height": #imageLiteral(resourceName: "potential energy of grav") ]
+    
+    var imageDict = [
+        "velocity=velocity_0+acceleration_x*time": #imageLiteral(resourceName: "find_velocity_with_time_and_accel"),
+        "position=position_0+velocity_x0*time+(1/2)acceleration_x*time^2": #imageLiteral(resourceName: "find_position"),
+        "velocity^2=velocity_0^2acceleration(position-position_0)": #imageLiteral(resourceName: "find_vel_w_accel_and_disp"),
+        "acceleration=force/mass": #imageLiteral(resourceName: "accel_w_force_mass"),
+        "force=position/time": #imageLiteral(resourceName: "accel_w_force_mass"), // add in right image
+        "impulse=force*time=momentum": #imageLiteral(resourceName: "accel_w_force_mass"), // add in right image
+        "momentum=mass*velocity": #imageLiteral(resourceName: "momentum w mass and vel"),
+        "force_f=coefficient of friction*force_n": #imageLiteral(resourceName: "frictional force"),
+        "energy=work=Force*radius": #imageLiteral(resourceName: "vel w radius and ang speed "), // add in right image later
+        "energy=work=Force*distance": #imageLiteral(resourceName: "vel w radius and ang speed "),// add in right image later
+        "kinetic energy=(1/2)mass*velocity^2": #imageLiteral(resourceName: "kinetic energy w mass and vel"),
+        "power=Energy/time": #imageLiteral(resourceName: "vel w radius and ang speed "), // add in right image later
+        "power=force*velocity": #imageLiteral(resourceName: "power w force and vel"),
+        "potential energy=mass*gravity*height": #imageLiteral(resourceName: "potential energy of grav"),
+        "Angular acceleration=sigma(torque)/rotational inertia": #imageLiteral(resourceName: "angular accel"),
+        "Angular acceleration=torque_net/rotational inertia": #imageLiteral(resourceName: "angular accel"),
+        "Rotational inertia=integral(radius^2*mass)": #imageLiteral(resourceName: "find_velocity_with_time_and_accel"), // add in right image later
+        "Rotational inertia=integral(distance^2*mass)": #imageLiteral(resourceName: "angular accel"), //add in right image later
+        "Rotational inertia-sigma(mass*radius^2)": #imageLiteral(resourceName: "find_velocity_with_time_and_accel"), // add in right image later
+        "Rotational inertia-sigma(mass*distance^2)": #imageLiteral(resourceName: "vel w radius and ang speed "), // add in right image later
+        "Position_cm = sigma(mass_i * position_i)/sigma(mass_i)": #imageLiteral(resourceName: "vel w radius and ang speed "), // add in the right image later
+        "Velocity = radius * angular speed": #imageLiteral(resourceName: "vel w radius and ang speed "),
+        "Angular momentum = radius*momentum": #imageLiteral(resourceName: "vel w radius and ang speed "), // add in right image later
+        "Angular momentum = rotational inertia*angular speed": #imageLiteral(resourceName: "vel w radius and ang speed "), // add in right image later
+        "Kinetic energy=1/2*rotational inertia*angular speed^2": #imageLiteral(resourceName: "kinetic energy w inertia"),
+        "Angular speed = angular speed_0 + angular acceleration*time":#imageLiteral(resourceName: "ang speed w angspeed and angaccel"),
+        "potential energy=-(mass1)(mass2)/radius":#imageLiteral(resourceName: "potential energy of grav"),
+        "force=(m1)(m2)/radius^2":#imageLiteral(resourceName: "force of gravity"),
+        "force=(m1)(m2)/distance^2": #imageLiteral(resourceName: "force of gravity"),
+        "period=2root(length/gravity)": #imageLiteral(resourceName: "period of pendulum"),
+        "period=2root(mass/spring constant)": #imageLiteral(resourceName: "period of spring"),
+        "period=2/angular speed=1/frequency": #imageLiteral(resourceName: "period w angspeed and freq"),
+        "position=position_maxcos(angular speed*time+phase angle)":#imageLiteral(resourceName: "position w max position, angspeed and phase angle"),
+        "potential energy=(1/2)spring constant*position^2": #imageLiteral(resourceName: "potential energy of spring"),
+        "force=-spring constant*position": #imageLiteral(resourceName: "force of spring"),
+        "angle=angle_0+angular speed_0*time+(1/2)angular acceleration*time^2":#imageLiteral(resourceName: "angle w angspeed and angaccel")
+        ]
     
     override func viewDidLoad() {
         
