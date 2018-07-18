@@ -12,6 +12,7 @@ class FormulaViewController: UIViewController {
     
     @IBOutlet weak var backButton: UIButton!
     
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -38,3 +39,7 @@ class FormulaViewController: UIViewController {
     }
 
 }
+
+
+    
+

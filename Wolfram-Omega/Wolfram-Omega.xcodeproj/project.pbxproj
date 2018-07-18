@@ -16,6 +16,7 @@
 		3537632020FE5CDC00664F89 /* FormulaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3537631F20FE5CDC00664F89 /* FormulaViewController.swift */; };
 		354E21A320FFD87E00D6B43C /* Guide.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 354E21A220FFD87E00D6B43C /* Guide.m4v */; };
 		354E21A520FFD8A600D6B43C /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354E21A420FFD8A600D6B43C /* HelpViewController.swift */; };
+		354E21A720FFE7EF00D6B43C /* FormulaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354E21A620FFE7EF00D6B43C /* FormulaTableViewCell.swift */; };
 		355A233A20FD95DC0086191B /* AddVariablesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355A233920FD95DC0086191B /* AddVariablesViewController.swift */; };
 		D330475320FE699500A1C8F9 /* VariableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D330475220FE699500A1C8F9 /* VariableTableViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -32,6 +33,7 @@
 		3537631F20FE5CDC00664F89 /* FormulaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaViewController.swift; sourceTree = "<group>"; };
 		354E21A220FFD87E00D6B43C /* Guide.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = Guide.m4v; sourceTree = "<group>"; };
 		354E21A420FFD8A600D6B43C /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
+		354E21A620FFE7EF00D6B43C /* FormulaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaTableViewCell.swift; sourceTree = "<group>"; };
 		355A233920FD95DC0086191B /* AddVariablesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVariablesViewController.swift; sourceTree = "<group>"; };
 		D330475220FE699500A1C8F9 /* VariableTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VariableTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -94,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				D330475220FE699500A1C8F9 /* VariableTableViewCell.swift */,
+				354E21A620FFE7EF00D6B43C /* FormulaTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 				352A4F9420FD1C9700AED264 /* AppDelegate.swift in Sources */,
 				3537349120FFB15A00F5FFCE /* PageViewController.swift in Sources */,
 				355A233A20FD95DC0086191B /* AddVariablesViewController.swift in Sources */,
+				354E21A720FFE7EF00D6B43C /* FormulaTableViewCell.swift in Sources */,
 				3537632020FE5CDC00664F89 /* FormulaViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

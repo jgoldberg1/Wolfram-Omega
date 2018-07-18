@@ -125,9 +125,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YSg-sA-B82">
-                                <rect key="frame" x="25" y="174" width="325" height="30"/>
+                                <rect key="frame" x="25" y="174" width="150" height="30"/>
                                 <color key="backgroundColor" red="0.87843137250000003" green="0.19215686269999999" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="sO5-86-weP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="15"/>
                                 <state key="normal" title="Add">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -190,21 +193,33 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Bj-CU-ksg">
+                                <rect key="frame" x="200" y="174" width="150" height="30"/>
+                                <color key="backgroundColor" red="0.8784313725490196" green="0.19215686274509802" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="m8x-ld-AaE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="15"/>
+                                <state key="normal" title="Clear">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="vvI-n7-byd" firstAttribute="top" secondItem="YSg-sA-B82" secondAttribute="bottom" constant="25" id="1x8-8h-fA4"/>
+                            <constraint firstItem="vvI-n7-byd" firstAttribute="top" secondItem="YSg-sA-B82" secondAttribute="bottom" constant="25" id="2qh-MB-tkW"/>
+                            <constraint firstItem="qtL-ze-NX2" firstAttribute="trailing" secondItem="9Bj-CU-ksg" secondAttribute="trailing" constant="25" id="6h4-Y7-xIf"/>
                             <constraint firstItem="MQL-YJ-PI1" firstAttribute="leading" secondItem="qtL-ze-NX2" secondAttribute="leading" constant="25" id="AAV-wm-B1W"/>
                             <constraint firstItem="bkP-rN-mgl" firstAttribute="top" secondItem="qtL-ze-NX2" secondAttribute="top" constant="50" id="Br9-Yb-rTA"/>
                             <constraint firstItem="MQL-YJ-PI1" firstAttribute="top" secondItem="bkP-rN-mgl" secondAttribute="bottom" constant="25" id="IH9-fk-ykb"/>
                             <constraint firstItem="qtL-ze-NX2" firstAttribute="trailing" secondItem="vvI-n7-byd" secondAttribute="trailing" constant="25" id="LCf-4B-djc"/>
-                            <constraint firstItem="qtL-ze-NX2" firstAttribute="trailing" secondItem="YSg-sA-B82" secondAttribute="trailing" constant="25" id="QeD-tG-QBQ"/>
                             <constraint firstItem="qtL-ze-NX2" firstAttribute="trailing" secondItem="383-pT-Gp0" secondAttribute="trailing" constant="25" id="SBf-iY-z3D"/>
-                            <constraint firstItem="YSg-sA-B82" firstAttribute="leading" secondItem="qtL-ze-NX2" secondAttribute="leading" constant="25" id="agk-Jd-Nwx"/>
+                            <constraint firstItem="9Bj-CU-ksg" firstAttribute="top" secondItem="MQL-YJ-PI1" secondAttribute="bottom" constant="25" id="X7k-QZ-wOq"/>
+                            <constraint firstItem="YSg-sA-B82" firstAttribute="leading" secondItem="qtL-ze-NX2" secondAttribute="leading" constant="25" id="aSN-gB-DSq"/>
                             <constraint firstItem="qtL-ze-NX2" firstAttribute="trailing" secondItem="MQL-YJ-PI1" secondAttribute="trailing" constant="25" id="dwI-lg-Sf8"/>
                             <constraint firstItem="qtL-ze-NX2" firstAttribute="trailing" secondItem="bkP-rN-mgl" secondAttribute="trailing" constant="25" id="gSf-vS-TjA"/>
+                            <constraint firstItem="YSg-sA-B82" firstAttribute="top" secondItem="MQL-YJ-PI1" secondAttribute="bottom" constant="25" id="gWN-99-d6n"/>
                             <constraint firstItem="383-pT-Gp0" firstAttribute="leading" secondItem="qtL-ze-NX2" secondAttribute="leading" constant="25" id="hTi-d5-a0R"/>
-                            <constraint firstItem="YSg-sA-B82" firstAttribute="top" secondItem="MQL-YJ-PI1" secondAttribute="bottom" constant="25" id="hz6-Nd-4Ji"/>
                             <constraint firstItem="vvI-n7-byd" firstAttribute="leading" secondItem="qtL-ze-NX2" secondAttribute="leading" constant="25" id="n1b-OO-lgC"/>
                             <constraint firstItem="383-pT-Gp0" firstAttribute="top" secondItem="vvI-n7-byd" secondAttribute="bottom" constant="53" id="nf8-Rp-o1A"/>
                             <constraint firstItem="bkP-rN-mgl" firstAttribute="leading" secondItem="qtL-ze-NX2" secondAttribute="leading" constant="25" id="p8f-yw-4jn"/>
@@ -215,6 +230,7 @@
                     <connections>
                         <outlet property="addButton" destination="YSg-sA-B82" id="OW4-4q-fdN"/>
                         <outlet property="calculateButton" destination="383-pT-Gp0" id="QUA-Gk-VLI"/>
+                        <outlet property="clearButton" destination="9Bj-CU-ksg" id="05S-Pd-Mvo"/>
                         <outlet property="tableView" destination="vvI-n7-byd" id="Kve-5n-gjA"/>
                         <outlet property="variableTextField" destination="MQL-YJ-PI1" id="kxh-DC-5Qe"/>
                     </connections>
@@ -236,19 +252,27 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Giu-qV-8hu">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Giu-qV-8hu" customClass="FormulaTableViewCell" customModule="Wolfram_Omega" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="317" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Giu-qV-8hu" id="X4Z-MW-Y55">
                                             <rect key="frame" x="0.0" y="0.0" width="317" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Muo-eU-QZD">
-                                                    <rect key="frame" x="15" y="5" width="249" height="32"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Muo-eU-QZD">
+                                                    <rect key="frame" x="0.0" y="0.0" width="292" height="43.5"/>
                                                 </imageView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="Muo-eU-QZD" secondAttribute="bottom" id="Orf-HX-uR2"/>
+                                                <constraint firstItem="Muo-eU-QZD" firstAttribute="top" secondItem="X4Z-MW-Y55" secondAttribute="top" id="QC1-zg-iXX"/>
+                                                <constraint firstItem="Muo-eU-QZD" firstAttribute="leading" secondItem="X4Z-MW-Y55" secondAttribute="leading" id="VYn-h2-bn8"/>
+                                                <constraint firstAttribute="trailing" secondItem="Muo-eU-QZD" secondAttribute="trailing" constant="25" id="hth-wx-QaP"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="formulaImage" destination="Muo-eU-QZD" id="AOM-Rg-2cn"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

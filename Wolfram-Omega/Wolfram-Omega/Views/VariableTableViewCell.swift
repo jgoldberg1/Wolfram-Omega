@@ -9,6 +9,7 @@
 import UIKit
 
 class VariableTableViewCell: UITableViewCell {
+    
     @IBOutlet weak var variableLabel: UILabel!
     
 }

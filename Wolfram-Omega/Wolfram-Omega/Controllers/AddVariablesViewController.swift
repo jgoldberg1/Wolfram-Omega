@@ -14,6 +14,7 @@ class AddVariablesViewController: UIViewController {
     @IBOutlet weak var calculateButton: UIButton!
     @IBOutlet weak var variableTextField: UITextField!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var clearButton: UIButton!
     
     // array of variables user has entered
     var variables = [String]() {
@@ -25,6 +26,7 @@ class AddVariablesViewController: UIViewController {
     // array holding the currently accepted input words
       var listOfAcceptedWordsSymbolic = ["a", "E", "F", "f", "h", "I", "J", "K", "k", "l", "L", "m", "P", "p", "r", "T", "t", "U", "v", "W", "x", "mu", "theta", "tau", "omega", "alpha", "phi", "initial velocity"]
     
+    //list of formulas
     var formulaList = ["velocity=velocity_0+acceleration_x*time",
         "position=position_0+velocity_x0*time+(1/2)acceleration_x*time^2",
         "velocity^2=velocity_0^2acceleration(position-position_0)",
@@ -60,22 +62,10 @@ class AddVariablesViewController: UIViewController {
         "position=position_maxcos(angular speed*time+phase angle)",
         "potential energy=(1/2)spring constant*position^2",
         "force=-spring constant*position",
-        "angle=angle_0+angular speed_0*time+(1/2)angular acceleration*time^2"//done,
+        "angle=angle_0+angular speed_0*time+(1/2)angular acceleration*time^2"
         
 ]
     var listOfAcceptedWordsWrittenOut = ["acceleration", "energy", "force", "frequency", "height", "rotational inertia", "kinetic energy", "spring constant", "length", "angular momentum", "mass", "power", "momentum", "radius", "distance", "period", "time", "potential energy", "velocity", "speed", "work done on a system", "position", "coefficient of friction", "angle", "torque", "angular speed", "angular acceleration", "phase angle", "velocity_0", "velocity"]
-    
-    //dictionary that associates the string equivalent of the function with the image that is going to be displayed to the user
-//     var formulasDictionary = ["velocity(final)=velocity(initial)+acceleration*time": #imageLiteral(resourceName: "find_velocity_with_time_and_accel"), "position=position(initial)+velocity(initial)*time+(1/2)acceleration*time^2": #imageLiteral(resourceName: "find_position"), "velocity(final)^2=velocity(initial)^2acceleration(position(final)-position(initial))": #imageLiteral(resourceName: "find_vel_w_accel_and_disp"), "acceleration=force/mass": #imageLiteral(resourceName: "accel_w_force_mass"), "force=position/time": ,
-//     "impulse=force*time=momentum",
-//     "momentum=mass*velocity": #imageLiteral(resourceName: "momentum w mass and vel"),
-//     "force=coefficient of friction*force",
-//     "energy=work=Force*radius",
-//     "energy=work=Force*distance",
-//     "kinetic energy=(1/2)mass*velocity^2": #imageLiteral(resourceName: "kinetic energy w mass and vel"),
-//     "power=Energy/time",
-//     "power=force*velocity": #imageLiteral(resourceName: "power w force and vel"),
-//     "potential energy=mass*gravity*height": #imageLiteral(resourceName: "potential energy of grav") ]
     
     var imageDict = [
         "velocity=velocity_0+acceleration_x*time": #imageLiteral(resourceName: "find_velocity_with_time_and_accel"),
@@ -123,13 +113,20 @@ class AddVariablesViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        //this set of code makes the add button and the calculate button look nicer
+        //this set of code makes the add button, clear button and the calculate button look nicer
         addButton.layer.cornerRadius = 15
         addButton.layer.shadowColor = UIColor(red:0, green:0, blue:0, alpha: 0.25).cgColor
         addButton.layer.shadowOffset = CGSize(width: 0.0, height: 3.0)
         addButton.layer.shadowOpacity = 1.0
         addButton.layer.shadowRadius = 0.0
         addButton.layer.masksToBounds = false
+        
+        clearButton.layer.cornerRadius = 15
+        clearButton.layer.shadowColor = UIColor(red:0, green:0, blue:0, alpha: 0.25).cgColor
+        clearButton.layer.shadowOffset = CGSize(width: 0.0, height: 3.0)
+        clearButton.layer.shadowOpacity = 1.0
+        clearButton.layer.shadowRadius = 0.0
+        clearButton.layer.masksToBounds = false
         
         calculateButton.layer.cornerRadius = 15
         calculateButton.layer.shadowColor = UIColor(red:0, green:0, blue:0, alpha: 0.25).cgColor
@@ -140,47 +137,6 @@ class AddVariablesViewController: UIViewController {
         
     }
     
-    //this method should populate the table view with the variable the user entered
-/*    @IBAction func addButtonPressed(_ sender: Any) {
-        if var currentText = variableTextField.text{
-            if listOfAcceptedWordsSymbolic.contains(currentText) {
-                let writtenOutArrayIndex = listOfAcceptedWordsSymbolic.index(of: currentText)
-                print(writtenOutArrayIndex as Any)
-                currentText = listOfAcceptedWordsWrittenOut[writtenOutArrayIndex!]
-                // add the variable to the prototype cells
-                //variableTextField.text = "it works, placeholder text"
-     variables.append(currentText)
-     print(variables)
-     variableTextField.text = ""
-            } else if listOfAcceptedWordsWrittenOut.contains(currentText) {
-     variables.append(currentText)
-     print(variables)
-     variableTextField.text = ""
-                
-            } else { //if they mispelled the variable
-                    let alert = UIAlertController(title: "Mispelled Variable Name", message: "Could not find an existing physcis variable. Try typing the variable name again.", preferredStyle: UIAlertControllerStyle.alert)
-                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
-                        switch action.style{
-                        case .default:
-                            print("default")
-                            
-                        case .cancel:
-                            print("cancel")
-                            
-                        case .destructive:
-                            print("destructive")
-                            
-                            
-                        }}))
-                    self.present(alert, animated: true, completion: nil)
-                }
-            }
-            }
-        }
- 
- 
- */
-
     //this method should populate the table view with the variable the user entered
     @IBAction func addButtonPressed(_ sender: Any) {
             if var currentText = variableTextField.text {
@@ -254,19 +210,6 @@ class AddVariablesViewController: UIViewController {
         tableView.reloadData()
         tableView.dequeueReusableCell(withIdentifier: "Variable", for: indexPath)
     }
-    
-    //    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    //        return variables.count
-    //    }
-    //
-    //    override func tableView(_ tableView: UITableViewCell, cellForRowAt: IndexPath) -> UITableViewCell {
-    //        let cell = tableView.deq
-    //    }
-    
-    
-    
-
-
 
     
 }
