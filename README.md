@@ -8,3 +8,5 @@ Users will open up the app and will be able to type in variables such as "accele
 ## Models
 ## Views
 ## Controllers
+# Credit
+Icons made by http://www.freepik.com
