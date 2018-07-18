@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="w9U-mM-TpB">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -11,41 +11,36 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Page View Controller-->
+        <scene sceneID="FqW-6W-dW6">
+            <objects>
+                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="w9U-mM-TpB" customClass="PageViewController" customModule="Wolfram_Omega" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qp3-qw-Rmu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2124" y="79"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Wolfram_Omega" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="landingPage" id="BYZ-38-t0r" customClass="ViewController" customModule="Wolfram_Omega" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="70Y-SZ-ybg">
-                                <rect key="frame" x="25" y="562" width="325" height="30"/>
-                                <color key="backgroundColor" red="0.8784313725490196" green="0.19215686274509802" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="15"/>
-                                <color key="tintColor" red="1" green="0.1857388616" blue="0.57339501380000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Continue">
-                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="titleShadowColor" red="1" green="0.41568627450000001" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="aHU-bD-zJm" kind="show" id="1sK-1X-8uA"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Make struggling in physics a thing of the past" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="isW-13-28Q">
-                                <rect key="frame" x="25" y="350" width="325" height="48"/>
+                                <rect key="frame" x="25" y="361" width="325" height="48"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="20"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Knowing which equation to use can be tough, that's why all you have to do is type in the variables that you do know. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="skR-rO-ZjQ">
-                                <rect key="frame" x="25" y="448" width="325" height="64.5"/>
+                                <rect key="frame" x="25" y="484" width="325" height="64.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blackboard (1)" translatesAutoresizingMaskIntoConstraints="NO" id="hBS-7g-AuI">
-                                <rect key="frame" x="100" y="68.5" width="175" height="256"/>
+                                <rect key="frame" x="100" y="70" width="175" height="256"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wolfram Omega" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uiX-Ud-Kel">
                                 <rect key="frame" x="25" y="40" width="325" height="36"/>
@@ -61,26 +56,65 @@
                             <constraint firstItem="isW-13-28Q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="BfQ-3v-49b"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="skR-rO-ZjQ" secondAttribute="trailing" constant="25" id="COt-yr-6K4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uiX-Ud-Kel" secondAttribute="trailing" constant="25" id="Ftx-hr-tdg"/>
-                            <constraint firstItem="isW-13-28Q" firstAttribute="top" secondItem="hBS-7g-AuI" secondAttribute="bottom" constant="25" id="G8o-CV-Vqm"/>
+                            <constraint firstItem="isW-13-28Q" firstAttribute="top" secondItem="hBS-7g-AuI" secondAttribute="bottom" constant="35" id="G8o-CV-Vqm"/>
                             <constraint firstItem="hBS-7g-AuI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="PAK-jM-Svl"/>
-                            <constraint firstItem="hBS-7g-AuI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="48.5" id="SZW-lL-OcT"/>
+                            <constraint firstItem="hBS-7g-AuI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="SZW-lL-OcT"/>
                             <constraint firstItem="uiX-Ud-Kel" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="SiB-cl-z6P"/>
                             <constraint firstItem="uiX-Ud-Kel" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="fOo-e7-tYp"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="isW-13-28Q" secondAttribute="trailing" constant="25" id="gV7-1Z-56V"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="70Y-SZ-ybg" secondAttribute="trailing" constant="25" id="ssw-qa-ka0"/>
-                            <constraint firstItem="70Y-SZ-ybg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="vIB-ju-HfH"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="70Y-SZ-ybg" secondAttribute="bottom" constant="75" id="vzd-aU-7Ce"/>
-                            <constraint firstItem="skR-rO-ZjQ" firstAttribute="top" secondItem="isW-13-28Q" secondAttribute="bottom" constant="50" id="z2B-fK-zUn"/>
+                            <constraint firstItem="skR-rO-ZjQ" firstAttribute="top" secondItem="isW-13-28Q" secondAttribute="bottom" constant="75" id="z2B-fK-zUn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <connections>
-                        <outlet property="continueButton" destination="70Y-SZ-ybg" id="Y8f-4r-lPK"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+            <point key="canvasLocation" x="-1302" y="79"/>
+        </scene>
+        <!--Help View Controller-->
+        <scene sceneID="uzQ-ll-yb9">
+            <objects>
+                <viewController storyboardIdentifier="helpView" id="tcD-q0-gv6" customClass="HelpViewController" customModule="Wolfram_Omega" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pso-H7-ZZM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search using the variable name or symbol name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="inm-uZ-GSd">
+                                <rect key="frame" x="25" y="95" width="325" height="48"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="20"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jsJ-Ak-zCw">
+                                <rect key="frame" x="25" y="562" width="325" height="30"/>
+                                <color key="backgroundColor" red="0.1720898449420929" green="0.66358476877212524" blue="0.84095078706741333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="15"/>
+                                <state key="normal" title="Continue">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="aHU-bD-zJm" kind="show" id="yWn-Oi-eNU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.8784313725490196" green="0.19215686274509802" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="inm-uZ-GSd" firstAttribute="top" secondItem="4wF-Cw-DCM" secondAttribute="top" constant="75" id="0Q4-if-h5d"/>
+                            <constraint firstItem="4wF-Cw-DCM" firstAttribute="bottom" secondItem="jsJ-Ak-zCw" secondAttribute="bottom" constant="75" id="1e6-bJ-Jdf"/>
+                            <constraint firstItem="jsJ-Ak-zCw" firstAttribute="leading" secondItem="4wF-Cw-DCM" secondAttribute="leading" constant="25" id="A2B-s0-3gt"/>
+                            <constraint firstItem="inm-uZ-GSd" firstAttribute="leading" secondItem="4wF-Cw-DCM" secondAttribute="leading" constant="25" id="ANr-mA-0Mo"/>
+                            <constraint firstItem="4wF-Cw-DCM" firstAttribute="trailing" secondItem="inm-uZ-GSd" secondAttribute="trailing" constant="25" id="IEX-2s-TY6"/>
+                            <constraint firstItem="4wF-Cw-DCM" firstAttribute="trailing" secondItem="jsJ-Ak-zCw" secondAttribute="trailing" constant="25" id="utn-kW-gMQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4wF-Cw-DCM"/>
+                    </view>
+                    <connections>
+                        <outlet property="continueButton" destination="jsJ-Ak-zCw" id="E79-DV-clg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gcf-Ty-RBB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-567.20000000000005" y="78.710644677661179"/>
         </scene>
         <!--Add Variables View Controller-->
         <scene sceneID="mDq-S3-fp3">
@@ -187,7 +221,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eck-S2-87p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="965.60000000000002" y="133.5832083958021"/>
+            <point key="canvasLocation" x="183" y="79"/>
         </scene>
         <!--Formula View Controller-->
         <scene sceneID="Mvg-Xi-erH">
@@ -253,7 +287,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d0t-FC-WYP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1653.5999999999999" y="139.880059970015"/>
+            <point key="canvasLocation" x="943" y="97"/>
         </scene>
     </scenes>
     <resources>
