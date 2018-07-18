@@ -79,15 +79,51 @@ class AddVariablesViewController: UIViewController {
     
     //this method should populate the table view with the variable the user entered
     @IBAction func addButtonPressed(_ sender: Any) {
+        if var currentText = variableTextField.text{
+            if listOfAcceptedWordsSymbolic.contains(currentText) {
+                let writtenOutArrayIndex = listOfAcceptedWordsSymbolic.index(of: currentText)
+                print(writtenOutArrayIndex as Any)
+                currentText = listOfAcceptedWordsWrittenOut[writtenOutArrayIndex!]
+                // add the variable to the prototype cells
+                //variableTextField.text = "it works, placeholder text"
+     variables.append(currentText)
+     print(variables)
+     variableTextField.text = ""
+            } else if listOfAcceptedWordsWrittenOut.contains(currentText) {
+     variables.append(currentText)
+     print(variables)
+     variableTextField.text = ""
+                
+            } else { //if they mispelled the variable
+                    let alert = UIAlertController(title: "Mispelled Variable Name", message: "Could not find an existing physcis variable. Try typing the variable name again.", preferredStyle: UIAlertControllerStyle.alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+                        switch action.style{
+                        case .default:
+                            print("default")
+                            
+                        case .cancel:
+                            print("cancel")
+                            
+                        case .destructive:
+                            print("destructive")
+                            
+                            
+                        }}))
+                    self.present(alert, animated: true, completion: nil)
+                }
+            }
+            }
+        }
+
+    //this method should populate the table view with the variable the user entered
+   /* @IBAction func addButtonPressed(_ sender: Any) {
         if let currentText = variableTextField.text{
             if listOfAcceptedWords.contains(currentText){
                 // add the variable to the prototype cells
                 //                variableTextField.text = currentText
                 //                currentText = variableTextField.text!
                 print("Accepted variable")
-                variables.append(currentText)
-                print(variables)
-                variableTextField.text = ""
+               
                 // call the new function here
                 //addNewVariable()
             }
@@ -110,9 +146,9 @@ class AddVariablesViewController: UIViewController {
             }
         }
         
+        */
         
-        
-    }
+
     
     //this method should take the user to the next page and display the formulas the user should use based on the variables they gave
     @IBAction func calculateButtonPressed(_ sender: Any) {
@@ -145,6 +181,11 @@ class AddVariablesViewController: UIViewController {
     
     
 }
+
+
+
+
+
 
 extension AddVariablesViewController: UITableViewDelegate, UITableViewDataSource {
     
