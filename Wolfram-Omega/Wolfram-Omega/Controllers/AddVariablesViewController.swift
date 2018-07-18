@@ -88,8 +88,7 @@ class AddVariablesViewController: UIViewController {
                 variables.append(currentText)
                 print(variables)
                 variableTextField.text = ""
-                // call the new function here
-                //addNewVariable()
+                
             }
             else{ //if they mispelled the variable
                 let alert = UIAlertController(title: "Mispelled Variable Name", message: "Could not find an existing physcis variable. Try typing the variable name again.", preferredStyle: UIAlertControllerStyle.alert)
@@ -116,7 +115,25 @@ class AddVariablesViewController: UIViewController {
     
     //this method should take the user to the next page and display the formulas the user should use based on the variables they gave
     @IBAction func calculateButtonPressed(_ sender: Any) {
-        
+        var listLength = variables.count
+        var tempCounter=0
+        // get the formula
+        for word in formulaList{
+            // get a variable from the list of variables
+            for name in variables{
+                // check if the formula has the variable
+                if word.contains(name){
+                    // increment the number of times the variables showed up in the formula
+                    tempCounter = tempCounter+1
+                }
+            }
+            // if the formula has all of the varibles, print it
+            if tempCounter == variables.count {
+                print(word)
+            }
+            tempCounter=0
+        }
+
     }
     
     
