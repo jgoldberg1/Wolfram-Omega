@@ -12,6 +12,8 @@
 		352A4F9920FD1C9700AED264 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 352A4F9720FD1C9700AED264 /* Main.storyboard */; };
 		352A4F9B20FD1C9800AED264 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 352A4F9A20FD1C9800AED264 /* Assets.xcassets */; };
 		352A4F9E20FD1C9800AED264 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 352A4F9C20FD1C9800AED264 /* LaunchScreen.storyboard */; };
+		3537348D20FFA60200F5FFCE /* Tabs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3537348C20FFA60200F5FFCE /* Tabs.storyboard */; };
+		3537348F20FFA7EA00F5FFCE /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3537348E20FFA7EA00F5FFCE /* PageViewController.swift */; };
 		3537632020FE5CDC00664F89 /* FormulaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3537631F20FE5CDC00664F89 /* FormulaViewController.swift */; };
 		355A233A20FD95DC0086191B /* AddVariablesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355A233920FD95DC0086191B /* AddVariablesViewController.swift */; };
 		D330475320FE699500A1C8F9 /* VariableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D330475220FE699500A1C8F9 /* VariableTableViewCell.swift */; };
@@ -25,6 +27,8 @@
 		352A4F9A20FD1C9800AED264 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		352A4F9D20FD1C9800AED264 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		352A4F9F20FD1C9800AED264 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3537348C20FFA60200F5FFCE /* Tabs.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tabs.storyboard; sourceTree = "<group>"; };
+		3537348E20FFA7EA00F5FFCE /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		3537631F20FE5CDC00664F89 /* FormulaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaViewController.swift; sourceTree = "<group>"; };
 		355A233920FD95DC0086191B /* AddVariablesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVariablesViewController.swift; sourceTree = "<group>"; };
 		D330475220FE699500A1C8F9 /* VariableTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VariableTableViewCell.swift; sourceTree = "<group>"; };
@@ -67,6 +71,7 @@
 				352A4F9A20FD1C9800AED264 /* Assets.xcassets */,
 				352A4F9C20FD1C9800AED264 /* LaunchScreen.storyboard */,
 				352A4F9F20FD1C9800AED264 /* Info.plist */,
+				3537348C20FFA60200F5FFCE /* Tabs.storyboard */,
 			);
 			path = "Wolfram-Omega";
 			sourceTree = "<group>";
@@ -77,6 +82,7 @@
 				352A4F9520FD1C9700AED264 /* ViewController.swift */,
 				355A233920FD95DC0086191B /* AddVariablesViewController.swift */,
 				3537631F20FE5CDC00664F89 /* FormulaViewController.swift */,
+				3537348E20FFA7EA00F5FFCE /* PageViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -147,6 +153,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3537348D20FFA60200F5FFCE /* Tabs.storyboard in Resources */,
 				352A4F9E20FD1C9800AED264 /* LaunchScreen.storyboard in Resources */,
 				352A4F9B20FD1C9800AED264 /* Assets.xcassets in Resources */,
 				352A4F9920FD1C9700AED264 /* Main.storyboard in Resources */,
@@ -163,6 +170,7 @@
 				D330475320FE699500A1C8F9 /* VariableTableViewCell.swift in Sources */,
 				352A4F9620FD1C9700AED264 /* ViewController.swift in Sources */,
 				352A4F9420FD1C9700AED264 /* AppDelegate.swift in Sources */,
+				3537348F20FFA7EA00F5FFCE /* PageViewController.swift in Sources */,
 				355A233A20FD95DC0086191B /* AddVariablesViewController.swift in Sources */,
 				3537632020FE5CDC00664F89 /* FormulaViewController.swift in Sources */,
 			);
