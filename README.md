@@ -9,4 +9,4 @@ Users will open up the app and will be able to type in variables such as "accele
 ## Views
 ## Controllers
 # Credit
-Icons made by http://www.freepik.com
+Icons made by Flaticon from http://www.freepik.com
