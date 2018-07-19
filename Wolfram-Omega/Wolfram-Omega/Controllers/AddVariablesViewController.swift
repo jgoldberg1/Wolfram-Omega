@@ -136,7 +136,7 @@ class AddVariablesViewController: UIViewController {
         calculateButton.layer.masksToBounds = false
         
         //this set of code allows the user to dismiss the keyboard when they are done typing so that it does not hinder them from accessing other parts of the view
-        let tap = UITapGestureRecognizer(target: self.view, action: Selector("endEditing:"))
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
         tap.cancelsTouchesInView = false
         self.view.addGestureRecognizer(tap)
     }
@@ -147,7 +147,11 @@ class AddVariablesViewController: UIViewController {
     
     //this method should populate the table view with the variable the user entered
     @IBAction func addButtonPressed(_ sender: Any) {
-            if var currentText = variableTextField.text {
+        if var currentText = variableTextField.text {
+            //if the user puts a space before, after, or both, disregard
+            if(currentText.hasPrefix("") || currentText.hasSuffix("") || (currentText.hasPrefix("") && currentText.hasSuffix("") )) {
+                currentText = currentText.trimmingCharacters(in: .whitespacesAndNewlines)
+            }
                 let varName = currentText.lowercased()
                 if listOfAcceptedWordsSymbolic.contains(currentText) {
                     let writtenOutArrayIndex = listOfAcceptedWordsSymbolic.index(of: currentText)
