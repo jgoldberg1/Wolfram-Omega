@@ -15,6 +15,7 @@ class AddVariablesViewController: UIViewController {
     @IBOutlet weak var variableTextField: UITextField!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var clearButton: UIButton!
+    @IBOutlet weak var helpButton: UIButton!
     
     // array of variables user has entered
     var variables = [String]() {
@@ -24,8 +25,6 @@ class AddVariablesViewController: UIViewController {
     }
     var formulas = [UIImage?]()
     
-    // array holding the currently accepted input words
-      var listOfAcceptedWordsSymbolic = ["a", "E", "F", "f", "h", "I", "J", "K", "k", "l", "L", "m", "P", "p", "r", "T", "t", "U", "v", "W", "x", "mu", "theta", "tau", "omega", "alpha", "phi", "initial velocity"]
     
     //list of formulas
     var formulaList = ["velocity=velocity_0+acceleration_x*time",
@@ -66,7 +65,11 @@ class AddVariablesViewController: UIViewController {
         "angle=angle_0+angular speed_0*time+(1/2)angular acceleration*time^2"
         
 ]
-    var listOfAcceptedWordsWrittenOut = ["acceleration", "energy", "force", "frequency", "height", "rotational inertia", "kinetic energy", "spring constant", "length", "angular momentum", "mass", "power", "momentum", "radius", "distance", "period", "time", "potential energy", "velocity", "speed", "work done on a system", "position", "coefficient of friction", "angle", "torque", "angular speed", "angular acceleration", "phase angle", "velocity_0", "velocity"]
+    var listOfAcceptedWordsWrittenOut = ["acceleration", "energy", "force", "frequency", "height", "rotational inertia", "impulse", "kinetic energy", "spring constant", "length", "angular momentum", "mass", "normal force", "power", "momentum", "radius", "period", "time", "potential energy", "velocity", "speed", "work done on a system", "position", "coefficient of friction", "angle", "torque", "angular speed", "angular acceleration", "phase angle", "initial velocity"]
+    
+    // array holding the currently accepted input words
+    var listOfAcceptedWordsSymbolic = ["a", "E", "F", "f", "h", "I", "J", "K", "k", "l", "L", "m", "N", "P", "p", "r", "T", "t", "U", "v", "v", "W", "x", "mu", "theta", "tau", "omega", "alpha", "phi", "initial velocity"]
+    
     
     var imageDict = [
         "velocity=velocity_0+acceleration_x*time": #imageLiteral(resourceName: "find_velocity_with_time_and_accel"),
@@ -114,13 +117,20 @@ class AddVariablesViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        //this set of code makes the add button, clear button and the calculate button look nicer
+        //this set of code makes the add button, help button, clear button and the calculate button look nicer
         addButton.layer.cornerRadius = 15
         addButton.layer.shadowColor = UIColor(red:0, green:0, blue:0, alpha: 0.25).cgColor
         addButton.layer.shadowOffset = CGSize(width: 0.0, height: 3.0)
         addButton.layer.shadowOpacity = 1.0
         addButton.layer.shadowRadius = 0.0
         addButton.layer.masksToBounds = false
+        
+        helpButton.layer.cornerRadius = 15
+        helpButton.layer.shadowColor = UIColor(red:0, green:0, blue:0, alpha: 0.25).cgColor
+        helpButton.layer.shadowOffset = CGSize(width: 0.0, height: 3.0)
+        helpButton.layer.shadowOpacity = 1.0
+        helpButton.layer.shadowRadius = 0.0
+        helpButton.layer.masksToBounds = false
         
         clearButton.layer.cornerRadius = 15
         clearButton.layer.shadowColor = UIColor(red:0, green:0, blue:0, alpha: 0.25).cgColor
@@ -137,7 +147,7 @@ class AddVariablesViewController: UIViewController {
         calculateButton.layer.masksToBounds = false
         
         //this set of code allows the user to dismiss the keyboard when they are done typing so that it does not hinder them from accessing other parts of the view
-        let tap = UITapGestureRecognizer(target: self.view, action: Selector("endEditing:"))
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
         tap.cancelsTouchesInView = false
         self.view.addGestureRecognizer(tap)
     }
@@ -148,14 +158,52 @@ class AddVariablesViewController: UIViewController {
     
     //this method should populate the table view with the variable the user entered
     @IBAction func addButtonPressed(_ sender: Any) {
-            if var currentText = variableTextField.text {
+        if var currentText = variableTextField.text {
+            //if the user puts a space before, after, or both, disregard
+            if(currentText.hasPrefix("") || currentText.hasSuffix("") || (currentText.hasPrefix("") && currentText.hasSuffix("") )) {
+                currentText = currentText.trimmingCharacters(in: .whitespacesAndNewlines)
+            }
                 let varName = currentText.lowercased()
+            //accounts for user trying to put variables in the list more than once
+            
+            if(variables.contains(varName)){
+                let alert = UIAlertController(title: "Repeated Variable", message: "You have already included this variable in your list.", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+                    switch action.style{
+                    case .default:
+                        print("default")
+                        
+                    case .cancel:
+                        print("cancel")
+                        
+                    case .destructive:
+                        print("destructive")
+                    }}))
+                self.present(alert, animated: true, completion: nil)
+            } else {
                 if listOfAcceptedWordsSymbolic.contains(currentText) {
                     let writtenOutArrayIndex = listOfAcceptedWordsSymbolic.index(of: currentText)
                     currentText = listOfAcceptedWordsWrittenOut[writtenOutArrayIndex!]
+                    if(variables.contains(currentText)) {
+                        let alert = UIAlertController(title: "Repeated Variable", message: "You have already included this variable in your list.", preferredStyle: UIAlertControllerStyle.alert)
+                        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+                            switch action.style{
+                            case .default:
+                                print("default")
+                                
+                            case .cancel:
+                                print("cancel")
+                                
+                            case .destructive:
+                                print("destructive")
+                            }}))
+                        self.present(alert, animated: true, completion: nil)
+                        
+                    } else {
                     variables.append(currentText)
                     print(variables)
                     variableTextField.text = ""
+                    }
                 } else if listOfAcceptedWordsWrittenOut.contains(varName) {
                     variables.append(varName)
                     print(variables)
@@ -177,6 +225,7 @@ class AddVariablesViewController: UIViewController {
             }
         }
     }
+}
     
         
 
@@ -214,6 +263,10 @@ class AddVariablesViewController: UIViewController {
     //clears the screen
     @IBAction func clearButtonPressed(_ sender: Any) {
         variables.removeAll()
+    }
+    
+    //goes back to the tab view if help button is pressed
+    @IBAction func helpButtonPressed(_ sender: Any) {
     }
     
     
