@@ -16,6 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        handleInitialScreen()
+        
         return true
     }
 
@@ -42,5 +45,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
+    func handleInitialScreen() {
+        let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
+        if launchedBefore  {
+            window = UIWindow(frame: UIScreen.main.bounds)
+            print("Not first launch.")
+            UserDefaults.standard.set(true, forKey: "launchedBefore")
+            print ("line 1")
+            //            let mainStoryboard: UIStoryboard = UIStoryboard(name: "/Users/yash/Library/Developer/CoreSimulator/Devices/3BE9A0BF-D217-4A4A-9BC6-8FBF186AC97F/data/Containers/Bundle/Application/B11B5FD4-CBA8-4AB4-8B1A-395C81C17FD1/Wolfram-Omega.appBase.lproj/Main.storyboardc", bundle: nil)
+            //let storyboard = UIStoryboard(name: "Main.storyboard", bundle: nil)
+            let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+            let viewController = storyboard.instantiateViewController(withIdentifier: "addVariablesViewController")
+//            UIApplication.shared.keyWindow?.rootViewController = viewController
+            window?.rootViewController = viewController
+            window?.makeKeyAndVisible()
+        } else {
+            print("First launch, setting UserDefault.")
+            
+        }
+    }
+    
 }
 
