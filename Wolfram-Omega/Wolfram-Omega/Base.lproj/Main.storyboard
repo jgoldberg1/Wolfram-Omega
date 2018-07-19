@@ -255,7 +255,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Giu-qV-8hu" customClass="FormulaTableViewCell" customModule="Wolfram_Omega" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FormulaTableViewCell" id="Giu-qV-8hu" customClass="FormulaTableViewCell" customModule="Wolfram_Omega" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="317" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Giu-qV-8hu" id="X4Z-MW-Y55">
@@ -310,6 +310,7 @@
                     </view>
                     <connections>
                         <outlet property="backButton" destination="G8u-7u-hhx" id="qEe-Yd-wz7"/>
+                        <outlet property="tableView" destination="p2C-Ck-fbL" id="KEp-uv-3IO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d0t-FC-WYP" userLabel="First Responder" sceneMemberID="firstResponder"/>
