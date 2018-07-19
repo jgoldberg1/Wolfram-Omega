@@ -135,6 +135,14 @@ class AddVariablesViewController: UIViewController {
         calculateButton.layer.shadowRadius = 0.0
         calculateButton.layer.masksToBounds = false
         
+        //this set of code allows the user to dismiss the keyboard when they are done typing so that it does not hinder them from accessing other parts of the view
+        let tap = UITapGestureRecognizer(target: self.view, action: Selector("endEditing:"))
+        tap.cancelsTouchesInView = false
+        self.view.addGestureRecognizer(tap)
+    }
+    
+    func doneButtonAction() {
+        self.view.endEditing(true)
     }
     
     //this method should populate the table view with the variable the user entered
