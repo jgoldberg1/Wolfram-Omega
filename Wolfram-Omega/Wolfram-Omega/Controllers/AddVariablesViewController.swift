@@ -112,7 +112,7 @@ class AddVariablesViewController: UIViewController {
  
 
     
-    
+   /*
     var imageDict2 = [
         "velocity=velocity_0+acceleration_x*time": #imageLiteral(resourceName: "find_velocity_with_time_and_accel"),
         "position=position_0+velocity_x0*time+(1/2)acceleration_x*time^2": #imageLiteral(resourceName: "find_position"),
@@ -145,7 +145,7 @@ class AddVariablesViewController: UIViewController {
         "force=-spring constant*position": #imageLiteral(resourceName: "force of spring"),
         "angle=angle_0+angular speed_0*time+(1/2)angular acceleration*time^2":#imageLiteral(resourceName: "angle w angspeed and angaccel")
     ]
- 
+ */
 
     
     
