@@ -15,6 +15,7 @@ class AddVariablesViewController: UIViewController {
     @IBOutlet weak var variableTextField: UITextField!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var clearButton: UIButton!
+    @IBOutlet weak var helpButton: UIButton!
     
     // array of variables user has entered
     var variables = [String]() {
@@ -115,13 +116,20 @@ class AddVariablesViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        //this set of code makes the add button, clear button and the calculate button look nicer
+        //this set of code makes the add button, help button, clear button and the calculate button look nicer
         addButton.layer.cornerRadius = 15
         addButton.layer.shadowColor = UIColor(red:0, green:0, blue:0, alpha: 0.25).cgColor
         addButton.layer.shadowOffset = CGSize(width: 0.0, height: 3.0)
         addButton.layer.shadowOpacity = 1.0
         addButton.layer.shadowRadius = 0.0
         addButton.layer.masksToBounds = false
+        
+        helpButton.layer.cornerRadius = 15
+        helpButton.layer.shadowColor = UIColor(red:0, green:0, blue:0, alpha: 0.25).cgColor
+        helpButton.layer.shadowOffset = CGSize(width: 0.0, height: 3.0)
+        helpButton.layer.shadowOpacity = 1.0
+        helpButton.layer.shadowRadius = 0.0
+        helpButton.layer.masksToBounds = false
         
         clearButton.layer.cornerRadius = 15
         clearButton.layer.shadowColor = UIColor(red:0, green:0, blue:0, alpha: 0.25).cgColor
