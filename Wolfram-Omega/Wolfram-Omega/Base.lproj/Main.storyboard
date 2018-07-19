@@ -331,6 +331,7 @@
                     </view>
                     <connections>
                         <outlet property="backButton" destination="G8u-7u-hhx" id="qEe-Yd-wz7"/>
+                        <outlet property="tableView" destination="p2C-Ck-fbL" id="KEp-uv-3IO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d0t-FC-WYP" userLabel="First Responder" sceneMemberID="firstResponder"/>

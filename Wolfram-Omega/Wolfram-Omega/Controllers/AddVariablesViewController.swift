@@ -23,6 +23,7 @@ class AddVariablesViewController: UIViewController {
             tableView.reloadData()
         }
     }
+    var formulas = [UIImage?]()
     
     
     //list of formulas
@@ -272,6 +273,7 @@ class AddVariablesViewController: UIViewController {
     @IBAction func calculateButtonPressed(_ sender: Any) {
         var tempCounter=0
         // get the formula
+        formulas = []
         for word in formulaList{
             // get a variable from the list of variables
             for name in variables{
@@ -284,11 +286,18 @@ class AddVariablesViewController: UIViewController {
             // if the formula has all of the varibles, print it
             if tempCounter == variables.count {
                 print(word)
+                
+                //Shreejas 
+                let temp = imageDict[word]
+                formulas.append(temp!)
+
             }
             tempCounter=0
         }
-
+        
     }
+    //method call
+
     
     //clears the screen
     @IBAction func clearButtonPressed(_ sender: Any) {
@@ -309,6 +318,11 @@ class AddVariablesViewController: UIViewController {
         // destoryed on the line below
         tableView.reloadData()
         tableView.dequeueReusableCell(withIdentifier: "Variable", for: indexPath)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destination = segue.destination as! FormulaViewController
+        destination.formulas = formulas
     }
 
     
