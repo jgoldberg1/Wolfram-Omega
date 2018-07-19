@@ -208,6 +208,9 @@
                                 <state key="normal" title="Help">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="helpButtonPressed:" destination="aHU-bD-zJm" eventType="touchUpInside" id="NoG-lc-Kck"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="383-pT-Gp0">
                                 <rect key="frame" x="25" y="174" width="325" height="30"/>
@@ -294,7 +297,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Muo-eU-QZD">
-                                                    <rect key="frame" x="0.0" y="0.0" width="292" height="43.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="43.5"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>

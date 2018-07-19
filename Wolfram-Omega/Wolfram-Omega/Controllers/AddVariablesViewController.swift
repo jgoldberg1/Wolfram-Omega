@@ -256,6 +256,10 @@ class AddVariablesViewController: UIViewController {
         variables.removeAll()
     }
     
+    //goes back to the tab view if help button is pressed
+    @IBAction func helpButtonPressed(_ sender: Any) {
+    }
+    
     
     func addNewVariable() {
         print("hello")
