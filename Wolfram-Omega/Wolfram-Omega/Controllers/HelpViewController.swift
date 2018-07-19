@@ -36,7 +36,7 @@ class HelpViewController: UIViewController {
         }
         let player = AVPlayer(url: URL(fileURLWithPath: path))
         let playerLayer = AVPlayerLayer(player: player)
-        playerLayer.frame = self.view.bounds
+        playerLayer.frame = CGRect(x: 15, y: 150, width: 350, height: 400)
         self.view.layer.addSublayer(playerLayer)
         player.play()
         loopVideo(videoPlayer: player)
