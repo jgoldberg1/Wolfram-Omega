@@ -155,12 +155,46 @@ class AddVariablesViewController: UIViewController {
                 currentText = currentText.trimmingCharacters(in: .whitespacesAndNewlines)
             }
                 let varName = currentText.lowercased()
+            //accounts for user trying to put variables in the list more than once
+            
+            if(variables.contains(varName)){
+                let alert = UIAlertController(title: "Repeated Variable", message: "You have already included this variable in your list.", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+                    switch action.style{
+                    case .default:
+                        print("default")
+                        
+                    case .cancel:
+                        print("cancel")
+                        
+                    case .destructive:
+                        print("destructive")
+                    }}))
+                self.present(alert, animated: true, completion: nil)
+            } else {
                 if listOfAcceptedWordsSymbolic.contains(currentText) {
                     let writtenOutArrayIndex = listOfAcceptedWordsSymbolic.index(of: currentText)
                     currentText = listOfAcceptedWordsWrittenOut[writtenOutArrayIndex!]
+                    if(variables.contains(currentText)) {
+                        let alert = UIAlertController(title: "Repeated Variable", message: "You have already included this variable in your list.", preferredStyle: UIAlertControllerStyle.alert)
+                        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+                            switch action.style{
+                            case .default:
+                                print("default")
+                                
+                            case .cancel:
+                                print("cancel")
+                                
+                            case .destructive:
+                                print("destructive")
+                            }}))
+                        self.present(alert, animated: true, completion: nil)
+                        
+                    } else {
                     variables.append(currentText)
                     print(variables)
                     variableTextField.text = ""
+                    }
                 } else if listOfAcceptedWordsWrittenOut.contains(varName) {
                     variables.append(varName)
                     print(variables)
@@ -182,6 +216,7 @@ class AddVariablesViewController: UIViewController {
             }
         }
     }
+}
     
         
 
