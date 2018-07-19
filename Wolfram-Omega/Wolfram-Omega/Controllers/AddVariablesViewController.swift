@@ -140,20 +140,19 @@ class AddVariablesViewController: UIViewController {
     //this method should populate the table view with the variable the user entered
     @IBAction func addButtonPressed(_ sender: Any) {
             if var currentText = variableTextField.text {
+                let varName = currentText.lowercased()
                 if listOfAcceptedWordsSymbolic.contains(currentText) {
                     let writtenOutArrayIndex = listOfAcceptedWordsSymbolic.index(of: currentText)
                     currentText = listOfAcceptedWordsWrittenOut[writtenOutArrayIndex!]
                     variables.append(currentText)
                     print(variables)
                     variableTextField.text = ""
-                // call the new function here
-                //addNewVariable()
-                } else if listOfAcceptedWordsWrittenOut.contains(currentText) {
-                    variables.append(currentText)
+                } else if listOfAcceptedWordsWrittenOut.contains(varName) {
+                    variables.append(varName)
                     print(variables)
                     variableTextField.text = ""
             } else { //if they mispelled the variable
-                let alert = UIAlertController(title: "Mispelled Variable Name", message: "Could not find an existing physcis variable. Try typing the variable name again.", preferredStyle: UIAlertControllerStyle.alert)
+                let alert = UIAlertController(title: "Mispelled Variable Name", message: "Oops, it seems like you meant to type something else. Try typing the variable name again.", preferredStyle: UIAlertControllerStyle.alert)
                 alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
                     switch action.style{
                     case .default:
@@ -164,8 +163,6 @@ class AddVariablesViewController: UIViewController {
                         
                     case .destructive:
                         print("destructive")
-                        
-                        
                     }}))
                 self.present(alert, animated: true, completion: nil)
             }
@@ -197,12 +194,15 @@ class AddVariablesViewController: UIViewController {
 
     }
     
+    //clears the screen
+    @IBAction func clearButtonPressed(_ sender: Any) {
+        variables.removeAll()
+    }
     
     
     func addNewVariable() {
         print("hello")
         let indexPath = IndexPath(row: variables.count-1, section: 0)
-        //tableView.beginUpdates()
         print ("destroyed here")
         tableView.insertRows(at: [indexPath], with: .automatic)
         print("hi")
@@ -231,11 +231,16 @@ extension AddVariablesViewController: UITableViewDelegate, UITableViewDataSource
         return cell
     }
     
+    //deletes a particular variable, in case the user made a mistake or something
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath){
+        if editingStyle == .delete {
+                variables.remove(at: indexPath.row)
+            }
+        }
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return variables.count
     }
-    
-    
-    
 }
+

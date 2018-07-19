@@ -203,6 +203,9 @@
                                 <state key="normal" title="Clear">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="clearButtonPressed:" destination="aHU-bD-zJm" eventType="touchUpInside" id="mlh-Ns-UUZ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -230,7 +233,7 @@
                     <connections>
                         <outlet property="addButton" destination="YSg-sA-B82" id="OW4-4q-fdN"/>
                         <outlet property="calculateButton" destination="383-pT-Gp0" id="QUA-Gk-VLI"/>
-                        <outlet property="clearButton" destination="9Bj-CU-ksg" id="05S-Pd-Mvo"/>
+                        <outlet property="clearButton" destination="9Bj-CU-ksg" id="uDb-an-yHz"/>
                         <outlet property="tableView" destination="vvI-n7-byd" id="Kve-5n-gjA"/>
                         <outlet property="variableTextField" destination="MQL-YJ-PI1" id="kxh-DC-5Qe"/>
                     </connections>
