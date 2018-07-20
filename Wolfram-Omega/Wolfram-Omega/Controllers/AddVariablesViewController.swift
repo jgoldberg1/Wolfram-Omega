@@ -292,7 +292,7 @@ class AddVariablesViewController: UIViewController {
                 
                 //Shreejas 
                 let temp = imageDict[word]
-                formulas.append(temp!)
+                formulas.append(temp)
 
             }
             tempCounter=0
