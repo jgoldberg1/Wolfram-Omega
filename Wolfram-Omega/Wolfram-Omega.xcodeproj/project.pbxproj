@@ -325,7 +325,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
 				DEVELOPMENT_TEAM = 3EMU544M8V;
 				INFOPLIST_FILE = "Wolfram-Omega/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -344,7 +343,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
 				DEVELOPMENT_TEAM = 3EMU544M8V;
 				INFOPLIST_FILE = "Wolfram-Omega/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
