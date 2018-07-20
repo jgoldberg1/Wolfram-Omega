@@ -357,6 +357,15 @@ extension AddVariablesViewController: UITableViewDelegate, UITableViewDataSource
         //display a cell with the variable that the user typed after they click add
         cell.variableLabel.text = variable
         
+        //makes the cell look nicer
+        cell.layer.cornerRadius = 15
+        cell.layer.shadowColor = UIColor(red:0, green:0, blue:0, alpha: 0.25).cgColor
+        cell.layer.shadowOffset = CGSize(width: 0.0, height: 3.0)
+        cell.layer.shadowOpacity = 1.0
+        cell.layer.shadowRadius = 0.0
+        cell.layer.masksToBounds = false
+        
+        
         return cell
     }
     
@@ -366,6 +375,12 @@ extension AddVariablesViewController: UITableViewDelegate, UITableViewDataSource
                 variables.remove(at: indexPath.row)
             }
         }
+    
+    //sets the height of the cell
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
+    {
+        return 50.0;
+    }
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

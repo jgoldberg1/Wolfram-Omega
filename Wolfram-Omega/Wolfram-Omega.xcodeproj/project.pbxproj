@@ -18,6 +18,7 @@
 		354E21A520FFD8A600D6B43C /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354E21A420FFD8A600D6B43C /* HelpViewController.swift */; };
 		354E21A720FFE7EF00D6B43C /* FormulaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354E21A620FFE7EF00D6B43C /* FormulaTableViewCell.swift */; };
 		355A233A20FD95DC0086191B /* AddVariablesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355A233920FD95DC0086191B /* AddVariablesViewController.swift */; };
+		35666BC12102599700C199A3 /* AnotherHelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35666BC02102599700C199A3 /* AnotherHelpViewController.swift */; };
 		D330475320FE699500A1C8F9 /* VariableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D330475220FE699500A1C8F9 /* VariableTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		354E21A420FFD8A600D6B43C /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		354E21A620FFE7EF00D6B43C /* FormulaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaTableViewCell.swift; sourceTree = "<group>"; };
 		355A233920FD95DC0086191B /* AddVariablesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVariablesViewController.swift; sourceTree = "<group>"; };
+		35666BC02102599700C199A3 /* AnotherHelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnotherHelpViewController.swift; sourceTree = "<group>"; };
 		D330475220FE699500A1C8F9 /* VariableTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VariableTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,6 +90,7 @@
 				3537631F20FE5CDC00664F89 /* FormulaViewController.swift */,
 				3537349020FFB15A00F5FFCE /* PageViewController.swift */,
 				354E21A420FFD8A600D6B43C /* HelpViewController.swift */,
+				35666BC02102599700C199A3 /* AnotherHelpViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 				D330475320FE699500A1C8F9 /* VariableTableViewCell.swift in Sources */,
 				352A4F9620FD1C9700AED264 /* ViewController.swift in Sources */,
 				352A4F9420FD1C9700AED264 /* AppDelegate.swift in Sources */,
+				35666BC12102599700C199A3 /* AnotherHelpViewController.swift in Sources */,
 				3537349120FFB15A00F5FFCE /* PageViewController.swift in Sources */,
 				355A233A20FD95DC0086191B /* AddVariablesViewController.swift in Sources */,
 				354E21A720FFE7EF00D6B43C /* FormulaTableViewCell.swift in Sources */,
