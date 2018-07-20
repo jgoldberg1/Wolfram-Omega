@@ -41,6 +41,12 @@
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E=" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dhy-us-mIY">
+                                <rect key="frame" x="75" y="163" width="225" height="137"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="100"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -52,7 +58,10 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Sak-uY-AMq" secondAttribute="trailing" id="J3a-nL-nMV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Sak-uY-AMq" secondAttribute="bottom" id="KVk-5X-hBn"/>
                             <constraint firstItem="B5p-dE-T3e" firstAttribute="top" secondItem="6fx-bA-lWK" secondAttribute="bottom" constant="50" id="L6a-hM-61c"/>
+                            <constraint firstItem="B5p-dE-T3e" firstAttribute="top" secondItem="Dhy-us-mIY" secondAttribute="bottom" constant="125" id="QEU-kj-brq"/>
                             <constraint firstItem="6fx-bA-lWK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="QFz-ra-EBq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Dhy-us-mIY" secondAttribute="trailing" constant="75" id="S8L-Tf-b3o"/>
+                            <constraint firstItem="Dhy-us-mIY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="75" id="paz-oZ-Nzx"/>
                             <constraint firstItem="Sak-uY-AMq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="pn3-cH-OZZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
