@@ -18,6 +18,9 @@ class HelpViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         
         super.viewDidAppear(animated)
+        
+        playVideo()
+        
         //this set of code makes the continue button look nicer
         continueButton.layer.cornerRadius = 20
         continueButton.layer.shadowColor = UIColor(red:0, green:0, blue:0, alpha: 0.25).cgColor
@@ -26,14 +29,13 @@ class HelpViewController: UIViewController {
         continueButton.layer.shadowRadius = 0.0
         continueButton.layer.masksToBounds = false
         
-      //  playVideo()
         
     }
     
     private func playVideo() {
         
-        guard let path = Bundle.main.path(forResource: "Guide", ofType: "m4v") else {
-            debugPrint("Guide.m4v not found")
+        guard let path = Bundle.main.path(forResource: "Delete", ofType: "mov") else {
+            debugPrint("Delete.mov not found")
             return
         }
         let player = AVPlayer(url: URL(fileURLWithPath: path))

@@ -15,19 +15,19 @@ class AnotherHelpViewController: UIViewController {
 
 override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
-    //playVideo()
+    playVideo()
     
 }
 
 private func playVideo() {
     
-    guard let path = Bundle.main.path(forResource: "Guide", ofType: "m4v") else {
-        debugPrint("Guide.m4v not found")
+    guard let path = Bundle.main.path(forResource: "Demo", ofType: "mov") else {
+        debugPrint("Demo.mov not found")
         return
     }
     let player = AVPlayer(url: URL(fileURLWithPath: path))
     let playerLayer = AVPlayerLayer(player: player)
-    playerLayer.frame = CGRect(x: 15, y: 150, width: 350, height: 400)
+    playerLayer.frame = CGRect(x: 15, y: 175, width: 350, height: 400)
     self.view.layer.addSublayer(playerLayer)
     player.play()
     loopVideo(videoPlayer: player)

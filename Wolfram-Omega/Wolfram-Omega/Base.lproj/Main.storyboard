@@ -62,10 +62,10 @@
             </objects>
             <point key="canvasLocation" x="-1767" y="79"/>
         </scene>
-        <!--View Controller-->
+        <!--Another Help View Controller-->
         <scene sceneID="gid-Pt-hvV">
             <objects>
-                <viewController storyboardIdentifier="anotherHelpView" id="XKX-PK-xYi" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="anotherHelpView" id="XKX-PK-xYi" customClass="AnotherHelpViewController" customModule="Wolfram_Omega" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QYz-nz-ZFw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

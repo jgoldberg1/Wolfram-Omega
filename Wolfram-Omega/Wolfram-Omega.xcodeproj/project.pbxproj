@@ -14,11 +14,12 @@
 		352A4F9E20FD1C9800AED264 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 352A4F9C20FD1C9800AED264 /* LaunchScreen.storyboard */; };
 		3537349120FFB15A00F5FFCE /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3537349020FFB15A00F5FFCE /* PageViewController.swift */; };
 		3537632020FE5CDC00664F89 /* FormulaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3537631F20FE5CDC00664F89 /* FormulaViewController.swift */; };
-		354E21A320FFD87E00D6B43C /* Guide.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 354E21A220FFD87E00D6B43C /* Guide.m4v */; };
 		354E21A520FFD8A600D6B43C /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354E21A420FFD8A600D6B43C /* HelpViewController.swift */; };
 		354E21A720FFE7EF00D6B43C /* FormulaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354E21A620FFE7EF00D6B43C /* FormulaTableViewCell.swift */; };
 		355A233A20FD95DC0086191B /* AddVariablesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355A233920FD95DC0086191B /* AddVariablesViewController.swift */; };
 		35666BC12102599700C199A3 /* AnotherHelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35666BC02102599700C199A3 /* AnotherHelpViewController.swift */; };
+		35666BC521028FC400C199A3 /* Delete.mov in Resources */ = {isa = PBXBuildFile; fileRef = 35666BC421028FC400C199A3 /* Delete.mov */; };
+		35666BC72102922200C199A3 /* Demo.mov in Resources */ = {isa = PBXBuildFile; fileRef = 35666BC62102922200C199A3 /* Demo.mov */; };
 		D330475320FE699500A1C8F9 /* VariableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D330475220FE699500A1C8F9 /* VariableTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -32,11 +33,12 @@
 		352A4F9F20FD1C9800AED264 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3537349020FFB15A00F5FFCE /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		3537631F20FE5CDC00664F89 /* FormulaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaViewController.swift; sourceTree = "<group>"; };
-		354E21A220FFD87E00D6B43C /* Guide.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = Guide.m4v; sourceTree = "<group>"; };
 		354E21A420FFD8A600D6B43C /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		354E21A620FFE7EF00D6B43C /* FormulaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaTableViewCell.swift; sourceTree = "<group>"; };
 		355A233920FD95DC0086191B /* AddVariablesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVariablesViewController.swift; sourceTree = "<group>"; };
 		35666BC02102599700C199A3 /* AnotherHelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnotherHelpViewController.swift; sourceTree = "<group>"; };
+		35666BC421028FC400C199A3 /* Delete.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Delete.mov; sourceTree = "<group>"; };
+		35666BC62102922200C199A3 /* Demo.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Demo.mov; sourceTree = "<group>"; };
 		D330475220FE699500A1C8F9 /* VariableTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VariableTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -54,7 +56,8 @@
 		352A4F8720FD1C9700AED264 = {
 			isa = PBXGroup;
 			children = (
-				354E21A220FFD87E00D6B43C /* Guide.m4v */,
+				35666BC62102922200C199A3 /* Demo.mov */,
+				35666BC421028FC400C199A3 /* Delete.mov */,
 				352A4F9220FD1C9700AED264 /* Wolfram-Omega */,
 				352A4F9120FD1C9700AED264 /* Products */,
 			);
@@ -162,7 +165,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				354E21A320FFD87E00D6B43C /* Guide.m4v in Resources */,
+				35666BC72102922200C199A3 /* Demo.mov in Resources */,
+				35666BC521028FC400C199A3 /* Delete.mov in Resources */,
 				352A4F9E20FD1C9800AED264 /* LaunchScreen.storyboard in Resources */,
 				352A4F9B20FD1C9800AED264 /* Assets.xcassets in Resources */,
 				352A4F9920FD1C9700AED264 /* Main.storyboard in Resources */,
