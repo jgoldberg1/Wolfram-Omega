@@ -12,11 +12,12 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
 
     //stores the page view controllers
     lazy var orderedViewControllers: [UIViewController] = {
-        return [self.newVC(viewController: "landingPage"),self.newVC(viewController: "helpView")]
+        return [self.newVC(viewController: "landingPage"),self.newVC(viewController: "anotherHelpView"), self.newVC(viewController: "helpView")]
     }()
     
     var pageControl = UIPageControl()
-    
+    var window: UIWindow?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.dataSource = self
@@ -36,7 +37,7 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         pageControl.currentPage = 0
         pageControl.tintColor = UIColor.gray
         pageControl.pageIndicatorTintColor = UIColor.gray
-        pageControl.currentPageIndicatorTintColor = UIColor.white
+        pageControl.currentPageIndicatorTintColor = UIColor.darkGray
         self.view.addSubview(pageControl)
     }
     
@@ -91,6 +92,15 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func help() {
+//        print("Help button was pressed!")
+//        window = UIWindow(frame: UIScreen.main.bounds)
+//        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+//        let viewController = storyboard.instantiateViewController(withIdentifier: "landingPage")
+//        window?.rootViewController = viewController
+//        window?.makeKeyAndVisible()
     }
 
 }
