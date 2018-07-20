@@ -10,6 +10,9 @@ import UIKit
 
 class AddVariablesViewController: UIViewController {
     
+
+    var window: UIWindow?
+    
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var calculateButton: UIButton!
     @IBOutlet weak var variableTextField: UITextField!
@@ -152,7 +155,7 @@ class AddVariablesViewController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
+        print("inside add variables view controller")
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -306,6 +309,18 @@ class AddVariablesViewController: UIViewController {
     
     //goes back to the tab view if help button is pressed
     @IBAction func helpButtonPressed(_ sender: Any) {
+        print("Help button was pressed!")
+        window = UIWindow(frame: UIScreen.main.bounds)
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "PageViewController")
+        window?.rootViewController = viewController
+        window?.makeKeyAndVisible()
+//        let pg: PageViewController = PageViewController()
+//        pg.viewDidLoad()
+//        pg.configurePageControl()
+        
+        let pg: ViewController = ViewController()
+        pg.viewDidLoad()
     }
     
     

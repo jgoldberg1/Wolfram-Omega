@@ -16,7 +16,8 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
     }()
     
     var pageControl = UIPageControl()
-    
+    var window: UIWindow?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.dataSource = self
@@ -91,6 +92,15 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func help() {
+//        print("Help button was pressed!")
+//        window = UIWindow(frame: UIScreen.main.bounds)
+//        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+//        let viewController = storyboard.instantiateViewController(withIdentifier: "landingPage")
+//        window?.rootViewController = viewController
+//        window?.makeKeyAndVisible()
     }
 
 }
