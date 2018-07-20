@@ -16,15 +16,17 @@ class HelpViewController: UIViewController {
   @IBOutlet weak var continueButton: UIButton!
     
     override func viewDidAppear(_ animated: Bool) {
+        
         super.viewDidAppear(animated)
         //this set of code makes the continue button look nicer
-        continueButton.layer.cornerRadius = 15
+        continueButton.layer.cornerRadius = 20
         continueButton.layer.shadowColor = UIColor(red:0, green:0, blue:0, alpha: 0.25).cgColor
         continueButton.layer.shadowOffset = CGSize(width: 0.0, height: 3.0)
         continueButton.layer.shadowOpacity = 1.0
         continueButton.layer.shadowRadius = 0.0
         continueButton.layer.masksToBounds = false
-        playVideo()
+        
+      //  playVideo()
         
     }
     
