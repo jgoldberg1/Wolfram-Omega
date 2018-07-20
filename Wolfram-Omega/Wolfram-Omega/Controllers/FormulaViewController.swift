@@ -77,6 +77,12 @@ extension FormulaViewController: UITableViewDataSource, UITableViewDelegate {
             formulas.remove(at: indexPath.row)
         }
     }
+    
+    //sets the height of the cell
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
+    {
+        return 150.0;
+    }
 }
 
 
