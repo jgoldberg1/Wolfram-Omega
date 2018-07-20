@@ -12,7 +12,7 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
 
     //stores the page view controllers
     lazy var orderedViewControllers: [UIViewController] = {
-        return [self.newVC(viewController: "landingPage"),self.newVC(viewController: "helpView")]
+        return [self.newVC(viewController: "landingPage"),self.newVC(viewController: "anotherHelpView"), self.newVC(viewController: "helpView")]
     }()
     
     var pageControl = UIPageControl()
@@ -36,7 +36,7 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         pageControl.currentPage = 0
         pageControl.tintColor = UIColor.gray
         pageControl.pageIndicatorTintColor = UIColor.gray
-        pageControl.currentPageIndicatorTintColor = UIColor.white
+        pageControl.currentPageIndicatorTintColor = UIColor.darkGray
         self.view.addSubview(pageControl)
     }
     
