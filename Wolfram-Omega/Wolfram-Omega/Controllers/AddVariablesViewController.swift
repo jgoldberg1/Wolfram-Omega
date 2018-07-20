@@ -71,31 +71,31 @@ class AddVariablesViewController: UIViewController {
     var listOfAcceptedWordsSymbolic = ["a", "E", "F", "f", "h", "I", "J", "K", "k", "l", "L", "m", "N", "P", "p", "r", "T", "t", "U", "v", "v", "W", "x", "mu", "theta", "tau", "omega", "alpha", "phi", "initial velocity"]
     
  
-    var imageDict = [
+    var imageDict: [String: UIImage] =  [
+        "acceleration=force/mass": #imageLiteral(resourceName: "accel_w_force_mass"),
         "velocity=velocity_0+acceleration_x*time": #imageLiteral(resourceName: "find_velocity_with_time_and_accel"),
         "position=position_0+velocity_x0*time+(1/2)acceleration_x*time^2": #imageLiteral(resourceName: "find_position"),
         "velocity^2=velocity_0^2acceleration(position-position_0)": #imageLiteral(resourceName: "find_vel_w_accel_and_disp"),
-        "acceleration=force/mass": #imageLiteral(resourceName: "accel_w_force_mass"),
-        "force=position/time": #imageLiteral(resourceName: "accel_w_force_mass"), // add in right image
-        "impulse=force*time=momentum": #imageLiteral(resourceName: "accel_w_force_mass"), // add in right image
+        "force=position/time": #imageLiteral(resourceName: "force = position:time"),
+        "impulse=force*time=momentum": #imageLiteral(resourceName: "impulse=force*time=momentum"),
         "momentum=mass*velocity": #imageLiteral(resourceName: "momentum w mass and vel"),
         "force_f=coefficient of friction*force_n": #imageLiteral(resourceName: "frictional force"),
-        "energy=work=Force*radius": #imageLiteral(resourceName: "vel w radius and ang speed "), // add in right image later
-        "energy=work=Force*distance": #imageLiteral(resourceName: "vel w radius and ang speed "),// add in right image later
+        "energy=work=Force*radius": #imageLiteral(resourceName: "USE THIS ONE!!"),
+        "energy=work=Force*distance": #imageLiteral(resourceName: "USE THIS ONE!!"),
         "kinetic energy=(1/2)mass*velocity^2": #imageLiteral(resourceName: "kinetic energy w mass and vel"),
-        "power=Energy/time": #imageLiteral(resourceName: "vel w radius and ang speed "), // add in right image later
+        "power=Energy/time": #imageLiteral(resourceName: "power=Energy:time"),
         "power=force*velocity": #imageLiteral(resourceName: "power w force and vel"),
         "potential energy=mass*gravity*height": #imageLiteral(resourceName: "potential energy of grav"),
         "Angular acceleration=sigma(torque)/rotational inertia": #imageLiteral(resourceName: "angular accel"),
         "Angular acceleration=torque_net/rotational inertia": #imageLiteral(resourceName: "angular accel"),
-        "Rotational inertia=integral(radius^2*mass)": #imageLiteral(resourceName: "find_velocity_with_time_and_accel"), // add in right image later
-        "Rotational inertia=integral(distance^2*mass)": #imageLiteral(resourceName: "angular accel"), //add in right image later
-        "Rotational inertia-sigma(mass*radius^2)": #imageLiteral(resourceName: "find_velocity_with_time_and_accel"), // add in right image later
-        "Rotational inertia-sigma(mass*distance^2)": #imageLiteral(resourceName: "vel w radius and ang speed "), // add in right image later
-        "Position_cm = sigma(mass_i * position_i)/sigma(mass_i)": #imageLiteral(resourceName: "vel w radius and ang speed "), // add in the right image later
-        "Velocity = radius * angular speed": #imageLiteral(resourceName: "vel w radius and ang speed "),
-        "Angular momentum = radius*momentum": #imageLiteral(resourceName: "vel w radius and ang speed "), // add in right image later
-        "Angular momentum = rotational inertia*angular speed": #imageLiteral(resourceName: "vel w radius and ang speed "), // add in right image later
+        "Rotational inertia=integral(radius^2*mass)": #imageLiteral(resourceName: "Rotational inertia=integral(radius^2*mass)"),
+        "Rotational inertia=integral(distance^2*mass)": #imageLiteral(resourceName: "Rotational inertia=integral(radius^2*mass)"),
+        "Rotational inertia-sigma(mass*radius^2)": #imageLiteral(resourceName: "Rotational inertia=integral(radius^2*mass)"),
+        "Rotational inertia-sigma(mass*distance^2)": #imageLiteral(resourceName: "Rotational inertia=integral(radius^2*mass)"),
+        "Position_cm = sigma(mass_i * position_i)/sigma(mass_i)": #imageLiteral(resourceName: "Postion in cm one"),
+        "Velocity = radius * angular speed": #imageLiteral(resourceName: "vel w radius and ang speed"),
+        "Angular momentum = radius*momentum": #imageLiteral(resourceName: "vel w radius and ang speed"),
+        "Angular momentum = rotational inertia*angular speed": #imageLiteral(resourceName: "angular momentum = radius*momentum"),
         "Kinetic energy=1/2*rotational inertia*angular speed^2": #imageLiteral(resourceName: "kinetic energy w inertia"),
         "Angular speed = angular speed_0 + angular acceleration*time":#imageLiteral(resourceName: "ang speed w angspeed and angaccel"),
         "potential energy=-(mass1)(mass2)/radius":#imageLiteral(resourceName: "potential energy of grav"),
