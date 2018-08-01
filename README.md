@@ -8,4 +8,4 @@ Users will open up the app and will be able to type in variables such as "accele
 ## Credit
 Icons made by Flaticon from http://www.freepik.com
 ## Name Change
-The official app is called E Equals and was simply called Wolfram-Omega when in developement
+The official app is called E Equals and was simply called Wolfram-Omega when in development.
